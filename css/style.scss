@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;700;900&display=swap');
+
+$Dark-green: #043d3d;
+$Back-green: #02383ab6;
+$Orange: #e2d7a6;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+//defaults
+body {
+  width: 100vw;
+  background-color: #fffff0;
+  display: block;
+  overflow-x: hidden;
+}
+
+.sectext {
+  z-index: 1;
+  font-size: 3em;
+  font-weight: 400;
+  background-color: $Dark-green;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-family: 'Jost', sans-serif;
+  color: ivory;
+  opacity: 0.5;
+}
+
+.sectext::first-letter {
+  font-size: 3.5rem;
+}
+
+.container {
+  position: relative;
+}
+
+.bg {
+  z-index: -1;
+  opacity: 0.2;
+  color: $Dark-green;
+  position: absolute;
+
+  font-family: 'Jost', sans-serif;
+  font-size: 15rem;
+}
+
+
+//Section1
+.section1 {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  .scroll {
+
+    position: absolute;
+    right: 2vw;
+    bottom: 5vh;
+    transform: rotateZ(90deg);
+
+    svg {
+      height: 7vh;
+      width: auto;
+    }
+
+    span {
+      font-size: 1em;
+    }
+  }
+}
+
+.mainimg {
+  height: 100vh;
+  width: 20%;
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+  top: 0%;
+  left: 70%;
+  background-position: bottom;
+  background-image: url("/DSC_1141.jpeg");
+  background-size: cover;
+}
+
+.sec1text {
+  font-family: 'Jost', sans-serif;
+  font-size: 5em;
+  font-weight: 400;
+  opacity: 1;
+  z-index: 1;
+  color: $Dark-green;
+  line-height: 50px;
+  text-align: right;
+  position: absolute;
+  top: 10%;
+  right: 32%;
+
+  .srname {
+    font-size: 2rem;
+    text-align: right;
+  }
+
+  .discripton {
+    font-size: 1.2rem;
+    font-weight: 300;
+    display: block;
+    line-height: 1;
+  }
+}
+
+.dis {
+  position: absolute;
+  text-align: right;
+  left: 1%;
+  bottom: 1%;
+  font-family: 'Jost', sans-serif;
+  svg{
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.draw_text {
+  position: absolute;
+  bottom: 10vh;
+  left: 40vw;
+
+  svg {
+    width: 60vw;
+    height: auto;
+  }
+}
+
+
+
+//Section2
+.section2 {
+  .bg {
+    left: 50%;
+    top: 40%;
+  }
+
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  transform: scale(1, 1);
+}
+
+.laptop {
+  position: relative;
+  left: -10%;
+  background-image: url("/img/Qarothome.jpg");
+  background-position: -8vw 60%;
+  width: 70%;
+  height: 88%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-right-radius: 5%;
+}
+
+.iphone {
+  background-image: url("/img/qarotmobile.jpg");
+  margin-right: 8%;
+  background-size: cover;
+  max-width: 280px;
+  max-height: 560px;
+  width: 20%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  border-radius: 11%;
+}
+
+.sec2text {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+}
+
+//Section3
+
+.section3 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+.sec3img1{
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+  0 2px 2px rgba(0,0,0,0.11), 
+  0 4px 4px rgba(0,0,0,0.11), 
+  0 6px 8px rgba(0,0,0,0.11),
+  0 8px 16px rgba(0,0,0,0.11);;
+}
+.sec3img2{
+  box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+  0 2px 2px rgba(0,0,0,0.20), 
+  0 4px 4px rgba(0,0,0,0.15), 
+  0 8px 8px rgba(0,0,0,0.10),
+    0 20px 30px -15px rgba(87, 87, 80, 0.5),
+    0 40px 40px -20px rgba(88, 87, 82, 0.4);
+}
+  svg {
+    height: 18vh;
+    width: 18vh;
+    cursor: pointer;
+  }
+
+  .bg {
+    left: 55%;
+    top: 5%;
+  }
+}
+
+.sec3img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  height: 100%;
+  width: 70%;
+  margin-left: 10%;
+
+  img {
+    height: 60vh;
+    width: auto;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+}
+
+.fleximgsec3 {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  width: 47%;
+
+  img {
+    align-self: flex-end;
+    height: 55vh;
+    width: auto;
+  }
+
+  p {
+    align-self: flex-start;
+    width: 110%;
+    background-color: #e2d7a6;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2em;
+    padding: 5%;
+    margin: 5%;
+  }
+}
+
+.sec3img img:last-child {
+  align-self: center;
+
+}
+
+.sec3text {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+}
+
+
+
+//Section4
+.section4 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 10%;
+
+  #arrow {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 15vw;
+  }
+
+  .bg {
+    right: 5%;
+    z-index: 1;
+  }
+
+  .sec4text {
+    position: absolute;
+    left: 43%;
+    opacity: 0.4;
+    top: 50%;
+    z-index: 3;
+  }
+}
+
+.bgquild {
+  height: 70vh;
+  width: auto;
+  margin-left: 30%;
+  margin-top: 15%;
+}
+
+.sec4img {
+  position: absolute;
+  z-index: 1;
+  height: 75vh;
+  width: auto;
+  top: 10%;
+  left: 0%;
+  margin-left: 8%;
+}
+
+//section5
+.section5 {
+  position: relative;
+
+  .grid-container {
+    height: 130vh;
+    display: grid;
+    margin-left: 20%;
+    padding-bottom: 10%;
+    width: 60vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 1.1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.7%;
+    grid-template-areas:
+      "one two three"
+      "Four Five six"
+      "seven Eight Nine ";
+
+
+  }
+
+  .one {
+    grid-area: one;
+    background-position-x: 30%;
+    background-image: url("/img/one.jpg");
+  }
+
+  .two {
+    grid-area: two;
+    background-image: url("/img/two.jpg");
+  }
+
+  .three {
+    grid-area: three;
+    background-image: url("/img/three.jpg");
+  }
+
+  .Four {
+    grid-area: Four;
+    background-image: url("/img/four.jpg");
+    background-position-y: 20%;
+  }
+
+  .Five {
+    grid-area: Five;
+    background-image: url("/img/five.jpg");
+    background-position-x: 40%;
+    background-position-y: 20%;
+  }
+
+  .six {
+    grid-area: six;
+    background-image: url("/img/six.jpg");
+  }
+
+  .seven {
+    grid-area: seven;
+    background-image: url("/img/seven.jpg");
+  }
+
+  .Eight {
+    grid-area: Eight;
+    background-image: url("/img/eight.jpg");
+  }
+
+  .Nine {
+    grid-area: Nine;
+    background-image: url("/img/nine.jpg");
+  }
+
+  .grid-container {
+    div {
+      background-color: #48c0b215;
+      background-blend-mode: color-dodge;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: 0%;
+    }
+  }
+
+  .sec5text {
+    position: absolute;
+    left: 8%;
+    opacity: 0.4;
+    top: 45%;
+    z-index: 6;
+  }
+
+  .bg {
+    right: 5%;
+  }
+
+}
+
+
+
+footer {
+  height: 80px;
+  width: 100vw;
+  background-color: #181d1dd8;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+
+  h3 {
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 1.3em;
+    padding-top: 19px;
+    font-weight: 400;
+  }
+}
+
+
+
+/* Tablets (portrait) ----------- */
+@media (max-width : 1300px) {
+  .sec4text {
+    top: 30%;
+  }
+
+  .section1 {
+    .scroll {
+      right: -68px;
+    }
+  }
+
+  .section4 {
+    margin-bottom: 0%;
+    height: 71vh;
+  }
+
+  .section5 {
+    .grid-container {
+      height: 300vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(9, 30vh);
+      grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "Four"
+        "Five"
+        "six"
+        "seven"
+        "Eight"
+        "nine";
+
+      .one {
+        grid-area: one;
+      }
+
+      .two {
+        grid-area: two;
+      }
+
+      .three {
+        grid-area: three;
+      }
+
+      .Four {
+        grid-area: Four;
+      }
+
+      .Five {
+        grid-area: Five;
+      }
+
+      .six {
+        grid-area: six;
+      }
+
+      .seven {
+        grid-area: seven;
+      }
+
+      .Eight {
+        grid-area: Eight;
+      }
+
+      .Nine {
+        grid-area: nine;
+      }
+    }
+  }
+
+  /* Styles */
+
+  .sec3img {
+    width: 70vw;
+    margin-left: 10vw;
+
+    img {
+      width: 30vw;
+      height: auto;
+
+    }
+  }
+
+  .sec4img {
+    width: 70vw;
+    height: auto;
+  }
+
+  .bgquild {
+    width: 66vw;
+    height: auto;
+  }
+
+  .section3 {
+    svg {
+      height: 15vw;
+      width: 15vw;
+      margin: 4vw;
+    }
+  }
+
+
+  .section2 {
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  .sec2text {
+    bottom: 60%;
+    left: 50%;
+  }
+
+  .laptop {
+    width: 80%;
+    height: auto;
+    background-position: -9.5vw 70%;
+  }
+
+  .iphone {
+    align-self: flex-end;
+    width: 20%;
+    height: auto;
+  }
+
+
+}
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 770px) {
+
+  .section2,
+  .section3 {
+    height: 80vh;
+  }
+
+  /* Styles */
+  .sectext,
+  .sec1text {
+    font-size: 1.2rem;
+  }
+
+  .bg {
+    font-size: 4.0rem;
+  }
+
+  .sectext::first-letter {
+    font-size: 1.7rem;
+  }
+
+  .fleximgsec3 {
+    p {
+      font-size: 0.8rem;
+      width: 60vw;
+    }
+  }
+}
+
+@media only screen and (max-width : 470px) {
+
+  .section2,
+  .section3,
+  .section4 {
+    height: 60vh;
+  }
+}
+
+
+*::-webkit-scrollbar {
+  display: none;
+}
