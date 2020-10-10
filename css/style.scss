@@ -11,13 +11,22 @@ $Orange: #e2d7a6;
 }
 
 
-
+#block{
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  overflow: hidden;
+  position: fixed;
+  z-index: 9999;
+}
 //defaults
 body {
   width: 100vw;
   background-color: #fffff0;
   display: block;
   overflow-x: hidden;
+  font-family: 'Jost', sans-serif;
 }
 
 .sectext {
@@ -83,9 +92,8 @@ body {
   z-index: -1;
   top: 0%;
   left: 70%;
-  background-position: bottom;
-  background-image: url("/DSC_1141.jpeg");
-  background-size: cover;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 .sec1text {
