@@ -1,22 +1,3 @@
-// window.addEventListener("load", event => {
-// 	var image = document.querySelector('.mainimg');
-// 	var isLoaded = image.complete && image.naturalHeight !== 0;
-
-// 	if (isLoaded) {
-// 		document.getElementById("block").style.display = "none";
-// 		gsap.registerPlugin(ScrollTrigger);
-// 		gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1, x: -80, stagger: 0.3, delay: 0.5 })
-// 			.from(".mainimg", { opacity: 0, duration: 1.5, y: -50 }, "-=0.8")
-// 			.from(".scroll", { opacity: 0, duration: 1.5, y: -50 }, "-=0.5");
-
-// 	}
-// });
-// var img = document.getElementById("mainimg").complete;
-
-// if(img){
-	
-	
-// }
 
 var image = document.getElementById("mainimg");
 var load = image.complete; 
@@ -27,6 +8,7 @@ if(load == true){
 	gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1, x: -80, stagger: 0.3, delay: 0.5 })
 		.from(".mainimg", { opacity: 0, duration: 1.5, y: -50 }, "-=0.8")
 		.from(".scroll", { opacity: 0, duration: 1.5, y: -50 }, "-=0.5");
+		new SmoothScroll(document, 120, 12);
 }
 
 if(document.getElementById("block").style.display != "none" ){
@@ -36,6 +18,7 @@ if(document.getElementById("block").style.display != "none" ){
 		gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1, x: -80, stagger: 0.3, delay: 0.5 })
 			.from(".mainimg", { opacity: 0, duration: 1.5, y: -50 }, "-=0.8")
 			.from(".scroll", { opacity: 0, duration: 1.5, y: -50 }, "-=0.5");
+			new SmoothScroll(document, 120, 12);
 	});
 
 }
@@ -146,9 +129,7 @@ sec3next.addEventListener("click", () => {
 
 
 //smooth scroll
-function init() {
-	new SmoothScroll(document, 120, 12)
-}
+
 
 function SmoothScroll(target, speed, smooth) {
 	if (target === document)
