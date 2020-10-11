@@ -347,11 +347,29 @@ body {
 .section3 .sec3img1 {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11), 0 8px 16px rgba(0, 0, 0, 0.11);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11), 0 8px 16px rgba(0, 0, 0, 0.11);
+  background-position-x: 0px;
+  background-image: url("/img/1.jpg");
+  overflow: hidden;
+  height: 60vh;
+  width: 40vh;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section3 .sec3img2 {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1), 0 20px 30px -15px rgba(87, 87, 80, 0.5), 0 40px 40px -20px rgba(88, 87, 82, 0.4);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1), 0 20px 30px -15px rgba(87, 87, 80, 0.5), 0 40px 40px -20px rgba(88, 87, 82, 0.4);
+  background-position-x: 0px;
+  background-image: url("/img/1c.jpg");
+  overflow: hidden;
+  height: 60vh;
+  width: 40vh;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .section3 svg {
@@ -375,20 +393,12 @@ body {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   height: 100%;
-  width: 70%;
-  margin-left: 10%;
-}
-
-.sec3img img {
-  height: 60vh;
-  width: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 3px;
+  width: 73vw;
+  margin-left: 6vw;
 }
 
 .fleximgsec3 {
@@ -402,7 +412,7 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  width: 47%;
+  width: 50%;
 }
 
 .fleximgsec3 img {
@@ -436,6 +446,7 @@ body {
 }
 
 .section4 {
+  margin-top: 10%;
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -616,7 +627,7 @@ footer h3 {
   }
   .section4 {
     margin-bottom: 0%;
-    height: 71vh;
+    height: 90vh;
   }
   .section5 .grid-container {
     height: 300vh;
@@ -673,12 +684,12 @@ footer h3 {
   }
   /* Styles */
   .sec3img {
-    width: 70vw;
-    margin-left: 10vw;
+    width: 80vw;
+    margin-left: 6vw;
   }
-  .sec3img img {
-    width: 30vw;
-    height: auto;
+  .sec3img .sec3img1, .sec3img .sec3img2 {
+    height: 40vw;
+    width: 28vw;
   }
   .sec4img {
     width: 70vw;
@@ -702,6 +713,9 @@ footer h3 {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .sec4img {
+    margin: 0;
+  }
   .sec2text {
     bottom: 60%;
     left: 50%;
@@ -721,9 +735,13 @@ footer h3 {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 770px) {
+  .sec3img {
+    height: 65%;
+  }
   .section2,
-  .section3 {
-    height: 80vh;
+  .section3,
+  .section4 {
+    height: 60vh;
   }
   /* Styles */
   .sectext,
@@ -746,7 +764,7 @@ footer h3 {
   .section2,
   .section3,
   .section4 {
-    height: 60vh;
+    height: 50vh;
   }
 }
 

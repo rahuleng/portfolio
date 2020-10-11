@@ -287,7 +287,15 @@ body {
   0 2px 2px rgba(0,0,0,0.11), 
   0 4px 4px rgba(0,0,0,0.11), 
   0 6px 8px rgba(0,0,0,0.11),
-  0 8px 16px rgba(0,0,0,0.11);;
+  0 8px 16px rgba(0,0,0,0.11);
+  background-position-x: 0px;
+  background-image: url("/img/1.jpg");
+  overflow: hidden;
+  height: 60vh;
+  width: 40vh;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .sec3img2{
   box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
@@ -296,6 +304,15 @@ body {
   0 8px 8px rgba(0,0,0,0.10),
     0 20px 30px -15px rgba(87, 87, 80, 0.5),
     0 40px 40px -20px rgba(88, 87, 82, 0.4);
+    background-position-x: 0px;
+    background-image: url("/img/1c.jpg");
+    overflow: hidden;
+    height: 60vh;
+    width: 40vh;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+  background-size: cover;
+  align-self: flex-end;
 }
   svg {
     height: 18vh;
@@ -313,24 +330,18 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: flex-start;
   height: 100%;
-  width: 70%;
-  margin-left: 10%;
+  width: 73vw;
+  margin-left: 6vw;
 
-  img {
-    height: 60vh;
-    width: auto;
-    object-fit: cover;
-    border-radius: 3px;
-  }
 }
 
 .fleximgsec3 {
   display: flex;
   flex-direction: column;
   width: fit-content;
-  width: 47%;
+  width: 50%;
 
   img {
     align-self: flex-end;
@@ -364,6 +375,7 @@ body {
 
 //Section4
 .section4 {
+  margin-top: 10%;
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -538,7 +550,7 @@ footer {
 
   .section4 {
     margin-bottom: 0%;
-    height: 71vh;
+    height: 90vh;
   }
 
   .section5 {
@@ -598,12 +610,11 @@ footer {
   /* Styles */
 
   .sec3img {
-    width: 70vw;
-    margin-left: 10vw;
-
-    img {
-      width: 30vw;
-      height: auto;
+    width: 80vw;
+    margin-left: 6vw;
+    .sec3img1, .sec3img2 {
+      height: 40vw;
+      width: 28vw;
 
     }
   }
@@ -634,6 +645,10 @@ footer {
 
   }
 
+  .sec4img{
+    margin: 0;
+  }
+
   .sec2text {
     bottom: 60%;
     left: 50%;
@@ -657,11 +672,16 @@ footer {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 770px) {
+  .sec3img{
+    height: 65%;
+  }
 
   .section2,
-  .section3 {
-    height: 80vh;
+  .section3,
+  .section4 {
+    height: 60vh;
   }
+
 
   /* Styles */
   .sectext,
@@ -690,9 +710,10 @@ footer {
   .section2,
   .section3,
   .section4 {
-    height: 60vh;
+    height: 50vh;
   }
 }
+
 
 
 *::-webkit-scrollbar {
