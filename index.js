@@ -50,23 +50,6 @@ gsap.from(".sec2img", {
 });
 
 
-var j = 0;
-
-document.getElementById("sec3next").addEventListener("click", () => {
-	if (j < 4) {
-		j++;
-		gsap.to(".sec3img1", { ease: "Power1.easeOut", backgroundPositionX: "+=25%", duration: 0.5 });
-		gsap.to(".sec3img2", { ease: "Power1.easeOut", backgroundPositionX: "+=25%", duration: 0.5 });
-	} else {
-		j = 0;
-		gsap.to(".sec3img1", { ease: "Power1.easeOut", backgroundPositionX: "0%", duration: 0.5 });
-		gsap.to(".sec3img2", { ease: "Power1.easeOut", backgroundPositionX: "0%", duration: 0.5 });
-	}
-
-});
-
-
-
 gsap.from("#arrow", {
 	scrollTrigger: {
 		trigger: "#arrow",
@@ -87,3 +70,17 @@ gsap.from("#sec3next", {
 	x: -200, duration: 1.5
 });
 
+var j = 0;
+
+document.getElementById("sec3next").addEventListener("click", () => {
+	if (j < 4) {
+		j++;
+		gsap.to(".sec3img1", { ease: "Power1.easeOut", backgroundPositionX: "+=25%", duration: 0.5 });
+		gsap.to(".sec3img2", { ease: "Power1.easeOut", backgroundPositionX: "+=25%", duration: 0.5 });
+	} else {
+		j = 0;
+		gsap.to(".sec3img1", { ease: "Power1.easeOut", backgroundPositionX: "0%", duration: 0.5 });
+		gsap.to(".sec3img2", { ease: "Power1.easeOut", backgroundPositionX: "0%", duration: 0.5 });
+	}
+
+});

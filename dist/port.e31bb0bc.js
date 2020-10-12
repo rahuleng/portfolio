@@ -7216,6 +7216,30 @@ _gsap.gsap.from(".sec2img", {
   }
 });
 
+_gsap.gsap.from("#arrow", {
+  scrollTrigger: {
+    trigger: "#arrow",
+    start: "top center",
+    toggleActions: "play none none none",
+    scrub: 1
+  },
+  // start the animation when ".box" enters the viewport (once)
+  x: 200,
+  duration: 1.5
+});
+
+_gsap.gsap.from("#sec3next", {
+  scrollTrigger: {
+    trigger: "#sec3next",
+    start: "top center",
+    toggleActions: "play none none none",
+    scrub: 1
+  },
+  // start the animation when ".box" enters the viewport (once)
+  x: -200,
+  duration: 1.5
+});
+
 var j = 0;
 document.getElementById("sec3next").addEventListener("click", function () {
   if (j < 4) {
@@ -7248,30 +7272,6 @@ document.getElementById("sec3next").addEventListener("click", function () {
     });
   }
 });
-
-_gsap.gsap.from("#arrow", {
-  scrollTrigger: {
-    trigger: "#arrow",
-    start: "top center",
-    toggleActions: "play none none none",
-    scrub: 1
-  },
-  // start the animation when ".box" enters the viewport (once)
-  x: 200,
-  duration: 1.5
-});
-
-_gsap.gsap.from("#sec3next", {
-  scrollTrigger: {
-    trigger: "#sec3next",
-    start: "top center",
-    toggleActions: "play none none none",
-    scrub: 1
-  },
-  // start the animation when ".box" enters the viewport (once)
-  x: -200,
-  duration: 1.5
-});
 },{"gsap":"node_modules/gsap/index.js","gsap/ScrollTrigger":"node_modules/gsap/ScrollTrigger.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -7300,7 +7300,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58153" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58335" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
