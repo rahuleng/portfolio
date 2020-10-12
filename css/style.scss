@@ -101,6 +101,8 @@ $loader:#afa472;
   }
 }
 }
+
+
 //defaults
 body {
   width: 100vw;
@@ -128,6 +130,7 @@ body {
 
 .container {
   position: relative;
+ 
 }
 
 .bg {
@@ -248,7 +251,7 @@ body {
   position: relative;
   left: -10%;
   background-image: url("/img/Qarothome.jpg");
-  background-position: -8vw 60%;
+  background-position: -8vw 30%;
   width: 70%;
   height: 88%;
   background-size: cover;
@@ -265,7 +268,7 @@ body {
   width: 20%;
   height: auto;
   background-repeat: no-repeat;
-  background-position: 0 100%;
+  background-position: 0 60%;
   border-radius: 11%;
 }
 
@@ -715,7 +718,3 @@ footer {
 }
 
 
-
-*::-webkit-scrollbar {
-  display: none;
-}
