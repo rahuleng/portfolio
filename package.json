@@ -18,7 +18,9 @@
     "url": "https://github.com/rahuleng/portfolio/issues"
   },
   "homepage": "https://github.com/rahuleng/portfolio#readme",
-  "dependencies": {},
+  "dependencies": {
+    "gsap": "^3.5.1"
+  },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
   }
