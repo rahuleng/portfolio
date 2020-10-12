@@ -7141,11 +7141,9 @@ _getGSAP() && gsap.registerPlugin(ScrollTrigger);
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
-var _gsap = _interopRequireDefault(require("gsap"));
+var _gsap = require("gsap");
 
-var _ScrollTrigger = _interopRequireDefault(require("gsap/ScrollTrigger"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _ScrollTrigger = require("gsap/ScrollTrigger");
 
 var image = document.getElementById("mainimg");
 var load = image.complete;
@@ -7154,7 +7152,7 @@ if (load == true) {
   console.log("test");
   document.getElementById("block").style.display = "none";
 
-  _gsap.default.timeline().from(".sec1text span", {
+  _gsap.gsap.timeline().from(".sec1text span", {
     opacity: 0,
     duration: 1,
     x: -80,
@@ -7175,7 +7173,7 @@ if (document.getElementById("block").style.display != "none") {
   document.getElementById("mainimg").addEventListener("load", function () {
     document.getElementById("block").style.display = "none";
 
-    _gsap.default.timeline().from(".sec1text span", {
+    _gsap.gsap.timeline().from(".sec1text span", {
       opacity: 0,
       duration: 1,
       x: -80,
@@ -7193,11 +7191,11 @@ if (document.getElementById("block").style.display != "none") {
   });
 }
 
-_gsap.default.registerPlugin(_ScrollTrigger.default); //text flot
+_gsap.gsap.registerPlugin(_ScrollTrigger.ScrollTrigger); //text flot
 
 
 for (var i = 2; i < 6; i++) {
-  _gsap.default.from(".sec" + i + "text", {
+  _gsap.gsap.from(".sec" + i + "text", {
     y: 270,
     ease: "none",
     scrollTrigger: {
@@ -7209,7 +7207,7 @@ for (var i = 2; i < 6; i++) {
 
 ; //parallex effect
 
-_gsap.default.from(".sec2img", {
+_gsap.gsap.from(".sec2img", {
   ease: "none",
   backgroundPositionY: "0%",
   scrollTrigger: {
@@ -7223,13 +7221,13 @@ document.getElementById("sec3next").addEventListener("click", function () {
   if (j < 4) {
     j++;
 
-    _gsap.default.to(".sec3img1", {
+    _gsap.gsap.to(".sec3img1", {
       ease: "Power1.easeOut",
       backgroundPositionX: "+=25%",
       duration: 0.5
     });
 
-    _gsap.default.to(".sec3img2", {
+    _gsap.gsap.to(".sec3img2", {
       ease: "Power1.easeOut",
       backgroundPositionX: "+=25%",
       duration: 0.5
@@ -7237,13 +7235,13 @@ document.getElementById("sec3next").addEventListener("click", function () {
   } else {
     j = 0;
 
-    _gsap.default.to(".sec3img1", {
+    _gsap.gsap.to(".sec3img1", {
       ease: "Power1.easeOut",
       backgroundPositionX: "0%",
       duration: 0.5
     });
 
-    _gsap.default.to(".sec3img2", {
+    _gsap.gsap.to(".sec3img2", {
       ease: "Power1.easeOut",
       backgroundPositionX: "0%",
       duration: 0.5
@@ -7251,7 +7249,7 @@ document.getElementById("sec3next").addEventListener("click", function () {
   }
 });
 
-_gsap.default.from("#arrow", {
+_gsap.gsap.from("#arrow", {
   scrollTrigger: {
     trigger: "#arrow",
     start: "top center",
@@ -7263,7 +7261,7 @@ _gsap.default.from("#arrow", {
   duration: 1.5
 });
 
-_gsap.default.from("#sec3next", {
+_gsap.gsap.from("#sec3next", {
   scrollTrigger: {
     trigger: "#sec3next",
     start: "top center",
@@ -7302,7 +7300,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56975" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57358" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

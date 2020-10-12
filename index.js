@@ -1,5 +1,5 @@
-import  gsap  from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 var image = document.getElementById("mainimg");
 var load = image.complete;
@@ -7,7 +7,6 @@ var load = image.complete;
 if (load == true) {
 	console.log("test");
 	document.getElementById("block").style.display = "none";
-	
 	gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1, x: -80, stagger: 0.3, delay: 0.5 })
 		.from(".mainimg", { opacity: 0, duration: 1.5, y: -50 }, "-=0.8")
 		.from(".scroll", { opacity: 0, duration: 1.5, y: -50 }, "-=0.5");
