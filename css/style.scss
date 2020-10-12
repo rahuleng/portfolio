@@ -384,7 +384,7 @@ body {
   width: 100vw;
   margin-bottom: 10%;
 
-  #arrow {
+  .arrow {
     position: absolute;
     top: 0;
     left: 30%;
@@ -636,7 +636,7 @@ footer {
   }
 
   .section3 {
-    svg {
+    .sec3next {
       height: 15vw;
       width: 15vw;
       margin: 4vw;
