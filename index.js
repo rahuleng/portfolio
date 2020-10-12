@@ -15,7 +15,7 @@ if (load == true) {
 if (document.getElementById("block").style.display != "none") {
 	document.getElementById("mainimg").addEventListener("load", () => {
 		document.getElementById("block").style.display = "none";
-		gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1, x: -80, stagger: 0.3, delay: 0.5 })
+		gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1.5, x: -80, stagger: 0.3, delay: 0.5 })
 			.from(".mainimg", { opacity: 0, duration: 1.5, y: -50 }, "-=0.8")
 			.from(".scroll", { opacity: 0, duration: 1.5, y: -50 }, "-=0.5");
 	});
@@ -52,22 +52,20 @@ gsap.from(".sec2img", {
 
 gsap.from(".arrow", {
 	scrollTrigger: {
-		trigger: ".arrow",
-		start: "top center",
-		toggleActions: "play none none none",
-		scrub: 1,
+		trigger: ".sec4img",
+		toggleActions: "play complete complete complete",
+		once: true,
 	}, // start the animation when ".box" enters the viewport (once)
-	x: 200, duration: 1.5
+	x: "55%", duration:1
 });
 
 gsap.from(".sec3next", {
 	scrollTrigger: {
-		trigger: ".sec3next",
-		start: "top center",
-		toggleActions: "play none none none",
-		scrub: 1,
+		trigger: ".fleximgsec3",
+		toggleActions: "play complete complete complete",
+		once: true,
 	}, // start the animation when ".box" enters the viewport (once)
-	x: -200, duration: 1.5
+	x: "-55%", duration: 1
 });
 
 var j = 0;

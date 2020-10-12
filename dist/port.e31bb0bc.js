@@ -7175,7 +7175,7 @@ if (document.getElementById("block").style.display != "none") {
 
     _gsap.gsap.timeline().from(".sec1text span", {
       opacity: 0,
-      duration: 1,
+      duration: 1.5,
       x: -80,
       stagger: 0.3,
       delay: 0.5
@@ -7216,32 +7216,30 @@ _gsap.gsap.from(".sec2img", {
   }
 });
 
-_gsap.gsap.from("#arrow", {
+_gsap.gsap.from(".arrow", {
   scrollTrigger: {
-    trigger: "#arrow",
-    start: "top center",
-    toggleActions: "play none none none",
-    scrub: 1
+    trigger: ".sec4img",
+    toggleActions: "play complete complete complete",
+    once: true
   },
   // start the animation when ".box" enters the viewport (once)
-  x: 200,
-  duration: 1.5
+  x: "55%",
+  duration: 1
 });
 
-_gsap.gsap.from("#sec3next", {
+_gsap.gsap.from(".sec3next", {
   scrollTrigger: {
-    trigger: "#sec3next",
-    start: "top center",
-    toggleActions: "play none none none",
-    scrub: 1
+    trigger: ".fleximgsec3",
+    toggleActions: "play complete complete complete",
+    once: true
   },
   // start the animation when ".box" enters the viewport (once)
-  x: -200,
-  duration: 1.5
+  x: "-55%",
+  duration: 1
 });
 
 var j = 0;
-document.getElementById("sec3next").addEventListener("click", function () {
+document.querySelector(".sec3next").addEventListener("click", function () {
   if (j < 4) {
     j++;
 
@@ -7300,7 +7298,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58335" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59878" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -521,11 +521,12 @@ body {
 footer {
   height: 80px;
   width: 100vw;
-  background-color: #181d1dd8;
+  background-color: $Dark-green;
   position: absolute;
   bottom: 0px;
   display: flex;
   justify-content: center;
+  opacity: 0.8;
 
   h3 {
     color: white;
@@ -618,9 +619,10 @@ footer {
   .sec3img {
     width: 80vw;
     margin-left: 6vw;
+    height: 76vh;
     .sec3img1, .sec3img2 {
-      height: 40vw;
-      width: 28vw;
+      height: 46vw;
+      width: 32vw;
 
     }
   }
@@ -679,7 +681,10 @@ footer {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 770px) {
   .sec3img{
-    height: 65%;
+    height: 75%;
+  }
+  .sec4text,.sec3text,.sec2text{
+    left: 0px;
   }
 
   .section2,
