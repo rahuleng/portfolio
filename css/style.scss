@@ -541,6 +541,9 @@ footer {
 
 /* Tablets (portrait) ----------- */
 @media (max-width : 1300px) {
+.rahul{
+  font-size: 3.5rem;
+}
   .sec4text {
     top: 30%;
   }
@@ -689,7 +692,7 @@ footer {
   /* Styles */
   .sectext,
   .sec1text {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 
   .bg {
