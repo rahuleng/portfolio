@@ -453,7 +453,7 @@ body {
   margin-bottom: 10%;
 }
 
-.section4 #arrow {
+.section4 .arrow {
   position: absolute;
   top: 0;
   left: 30%;
@@ -702,7 +702,7 @@ footer h3 {
     width: 66vw;
     height: auto;
   }
-  .section3 svg {
+  .section3 .sec3next {
     height: 15vw;
     width: 15vw;
     margin: 4vw;
