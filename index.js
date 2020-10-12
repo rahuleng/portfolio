@@ -50,9 +50,9 @@ gsap.from(".sec2img", {
 });
 
 
-gsap.from("#arrow", {
+gsap.from(".arrow", {
 	scrollTrigger: {
-		trigger: "#arrow",
+		trigger: ".arrow",
 		start: "top center",
 		toggleActions: "play none none none",
 		scrub: 1,
@@ -60,9 +60,9 @@ gsap.from("#arrow", {
 	x: 200, duration: 1.5
 });
 
-gsap.from("#sec3next", {
+gsap.from(".sec3next", {
 	scrollTrigger: {
-		trigger: "#sec3next",
+		trigger: ".sec3next",
 		start: "top center",
 		toggleActions: "play none none none",
 		scrub: 1,
@@ -72,7 +72,7 @@ gsap.from("#sec3next", {
 
 var j = 0;
 
-document.getElementById("sec3next").addEventListener("click", () => {
+document.querySelector(".sec3next").addEventListener("click", () => {
 	if (j < 4) {
 		j++;
 		gsap.to(".sec3img1", { ease: "Power1.easeOut", backgroundPositionX: "+=25%", duration: 0.5 });
