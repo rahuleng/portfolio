@@ -83,3 +83,13 @@ document.querySelector(".sec3next").addEventListener("click", () => {
 	}
 
 });
+
+document.querySelector(".round").addEventListener("click", () => {
+	document.getElementById("temp").className = "anim";
+	document.getElementById("temp1").className = "anim";
+	setTimeout(function(){ 
+		document.getElementById("temp").className = "";
+		document.getElementById("temp1").className = "";
+
+	 }, 8000);
+});

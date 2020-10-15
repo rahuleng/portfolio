@@ -222,17 +222,18 @@ body {
 
 .dis {
   position: absolute;
-  text-align: right;
   left: 1%;
   bottom: 1%;
-  font-family: 'Jost', sans-serif;
+  display: flex;
+  flex-direction: column;
   a{
     width: 3vw;
     align-self: flex-start;
   }
   svg{
-    height: 60px;
-    width: 60px;
+    height: 48px;
+    width: 48px;
+    margin-bottom: 2vh;
   }
 }
 .contact{
@@ -305,6 +306,108 @@ body {
   bottom: 40%;
   left: 50%;
 }
+
+
+.ouro {
+  position: relative;
+  display:inline-block;
+  height: 46px;
+  width: 46px;
+  margin: 1em;
+  border-radius: 50%;  
+  background: none repeat scroll 0 0 #02383aa4;
+  overflow:hidden;
+  transform: scale(var(--ggs,2.8));
+  cursor: pointer;
+}
+
+.ouro:after {
+  content: "";
+  position: absolute;
+  top: 9px; left: 9px;
+  display: block;
+  height: 28px; width: 28px;
+  background: none repeat scroll 0 0 #fffff0;
+  border-radius: 50%;
+}
+.ouro > span {
+  position: absolute;
+  height: 100%; width: 50%;
+  overflow: hidden;
+}
+.left  { left:0   }
+.right { left:50% }
+
+.anim {
+  position: absolute;
+  left: 100%; top: 0;
+  height: 100%; width: 100%;
+  border-radius: 999px;
+  background: none repeat scroll 0 0 $Dark-green;
+  opacity: 0.6;
+  -webkit-animation: ui-spinner-rotate-left 3s 5;
+  animation: ui-spinner-rotate-left 3s 5;
+  -webkit-transform-origin: 0 50% 0;
+  transform-origin: 0 50% 0;
+}
+
+.left .anim {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.right .anim {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  left: -100%;
+  -webkit-transform-origin: 100% 50% 0;
+  transform-origin: 100% 50% 0;
+}
+
+/* v2 */
+.ouro2 .anim {
+ -webkit-animation-delay:0;
+ animation-delay:0;
+}
+.ouro2 .right .anim{
+ -webkit-animation-delay: 1.5s;
+ animation-delay: 1.5s;
+}
+
+
+/* round variation */
+.round .ouro:after {display:none }
+
+
+@keyframes ui-spinner-rotate-right{
+0%{transform:rotate(0deg)}
+25%{transform:rotate(180deg)}
+50%{transform:rotate(180deg)}
+75%{transform:rotate(360deg)}
+100%{transform:rotate(360deg)}
+}
+@keyframes ui-spinner-rotate-left{
+0%{transform:rotate(0deg)}
+25%{transform:rotate(0deg)}
+50%{transform:rotate(180deg)}
+75%{transform:rotate(180deg)}
+100%{transform:rotate(360deg)}
+}
+
+@-webkit-keyframes ui-spinner-rotate-right{
+0%{-webkit-transform:rotate(0deg)}
+25%{-webkit-transform:rotate(180deg)}
+50%{-webkit-transform:rotate(180deg)}
+75%{-webkit-transform:rotate(360deg)}
+100%{-webkit-transform:rotate(360deg)}
+}
+@-webkit-keyframes ui-spinner-rotate-left{
+0%{-webkit-transform:rotate(0deg)}
+25%{-webkit-transform:rotate(0deg)}
+50%{-webkit-transform:rotate(180deg)}
+75%{-webkit-transform:rotate(180deg)}
+100%{-webkit-transform:rotate(360deg)}
+}
+
 
 //Section3
 
@@ -712,8 +815,7 @@ footer {
     height: 75%;
   }
   .contact{
-    font-size: 10em;
-    left: -60px;
+    display: none;
   }
   .sec4text,.sec3text,.sec2text{
     left: 0px;
