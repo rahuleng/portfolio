@@ -195,6 +195,21 @@ body {
   font-size: 15rem;
 }
 
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 .section1 {
   height: 100vh;
   width: 100vw;
@@ -203,19 +218,30 @@ body {
 
 .section1 .scroll {
   position: absolute;
-  right: 2vw;
+  right: 7vw;
   bottom: 5vh;
-  -webkit-transform: rotateZ(90deg);
-          transform: rotateZ(90deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .section1 .scroll svg {
-  height: 7vh;
+  height: 8vh;
   width: auto;
 }
 
 .section1 .scroll span {
-  font-size: 1em;
+  font-size: 1.8em;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: #043d3d;
+  opacity: 0.7;
 }
 
 .mainimg {
@@ -234,12 +260,12 @@ body {
 
 .sec1text {
   font-family: 'Jost', sans-serif;
-  font-size: 5em;
+  font-size: 6em;
   font-weight: 400;
   opacity: 1;
   z-index: 1;
   color: #043d3d;
-  line-height: 50px;
+  line-height: 60px;
   text-align: right;
   position: absolute;
   top: 10%;
@@ -247,8 +273,9 @@ body {
 }
 
 .sec1text .srname {
-  font-size: 2rem;
+  font-size: 2.6rem;
   text-align: right;
+  line-height: 70px;
 }
 
 .sec1text .discripton {
@@ -266,9 +293,28 @@ body {
   font-family: 'Jost', sans-serif;
 }
 
+.dis a {
+  width: 3vw;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 .dis svg {
   height: 60px;
   width: 60px;
+}
+
+.contact {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 15em;
+  opacity: 0.2;
+  color: #043d3d;
+  position: absolute;
+  left: -90px;
+  bottom: 15vh;
 }
 
 .draw_text {
@@ -627,7 +673,7 @@ footer h3 {
     top: 30%;
   }
   .section1 .scroll {
-    right: -68px;
+    right: 2vw;
   }
   .section4 {
     margin-bottom: 0%;
@@ -743,6 +789,10 @@ footer h3 {
   .sec3img {
     height: 75%;
   }
+  .contact {
+    font-size: 10em;
+    left: -60px;
+  }
   .sec4text, .sec3text, .sec2text {
     left: 0px;
   }
@@ -774,5 +824,9 @@ footer h3 {
   .section4 {
     height: 50vh;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,7 +9,8 @@ if (load == true) {
 	document.getElementById("block").style.display = "none";
 	gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1, x: -80, stagger: 0.3, delay: 0.5 })
 		.from(".mainimg", { opacity: 0, duration: 1.5, y: -50 }, "-=0.8")
-		.from(".scroll", { opacity: 0, duration: 1.5, y: -50 }, "-=0.5");
+		.from(".scroll", { opacity: 0, duration: 0.5, y: -50 }, "-=0.5")
+		.from(".contact", {opacity: 0, duration: 0.5,});
 }
 
 if (document.getElementById("block").style.display != "none") {
@@ -56,7 +57,7 @@ gsap.from(".arrow", {
 		toggleActions: "play complete complete complete",
 		once: true,
 	}, // start the animation when ".box" enters the viewport (once)
-	x: "55%", duration:1
+	x: "45%", duration:1,delay:0.5,
 });
 
 gsap.from(".sec3next", {
@@ -65,7 +66,7 @@ gsap.from(".sec3next", {
 		toggleActions: "play complete complete complete",
 		once: true,
 	}, // start the animation when ".box" enters the viewport (once)
-	x: "-55%", duration: 1
+	x: "-55%", duration: 1, delay:0.8,
 });
 
 var j = 0;

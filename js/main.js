@@ -6,7 +6,6 @@ if (window.innerWidth > 1300) {
 }
 
 
-
 //zoom effect
 
 
@@ -16,9 +15,6 @@ if (window.innerWidth > 1300) {
 // 	  trigger: ".section2",   
 // 	},duration: 1, transform: "scale(1.2,1.2)"});
 // }
-
-
-
 
 // gsap.from(".sec5img", {
 // 	ease: "none",
@@ -42,7 +38,6 @@ if (window.innerWidth > 1300) {
 // 		},
 // 	});
 // }
-
 
 
 
