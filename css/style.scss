@@ -688,24 +688,19 @@ footer {
 
   .section4 {
     margin-bottom: 0%;
-    height: 90vh;
   }
 
   .section5 {
     .grid-container {
-      height: 300vh;
-      grid-template-columns: 1fr;
+      height: 110vh;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(9, 30vh);
       grid-template-areas:
-        "one"
-        "two"
-        "three"
-        "Four"
-        "Five"
-        "six"
-        "seven"
-        "Eight"
-        "nine";
+        "one two"
+        "three Four"
+        "Five six"
+        "seven Eight"
+        "nine ";
 
       .one {
         grid-area: one;
@@ -777,12 +772,7 @@ footer {
   }
 
 
-  .section2 {
-    margin: 0;
-    flex-direction: column;
-    justify-content: space-around;
-
-  }
+  
 
   .sec4img{
     margin: 0;
@@ -801,7 +791,7 @@ footer {
 
   .iphone {
     align-self: flex-end;
-    width: 20%;
+    width: 16%;
     height: auto;
   }
 
@@ -811,6 +801,70 @@ footer {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 770px) {
+
+  .section2 {
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+.iphone{
+  width: 18%;
+  height: auto;
+}
+.section5{
+  .grid-container {
+    height: 300vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 30vh);
+    grid-template-areas:
+      "one "
+      "two"
+      "three"
+      "Four"
+      "Five"
+      "six"
+      "seven"
+      "Eight"
+      "nine ";
+  }
+      .one {
+        grid-area: one;
+      }
+
+      .two {
+        grid-area: two;
+      }
+
+      .three {
+        grid-area: three;
+      }
+
+      .Four {
+        grid-area: Four;
+      }
+
+      .Five {
+        grid-area: Five;
+      }
+
+      .six {
+        grid-area: six;
+      }
+
+      .seven {
+        grid-area: seven;
+      }
+
+      .Eight {
+        grid-area: Eight;
+      }
+
+      .Nine {
+        grid-area: nine;
+      }
+}
+  
   .sec3img{
     height: 75%;
   }
@@ -821,9 +875,7 @@ footer {
     left: 0px;
   }
 
-  .section2,
-  .section3,
-  .section4 {
+  .section3{
     height: 60vh;
   }
 
@@ -852,10 +904,30 @@ footer {
 
 @media only screen and (max-width : 470px) {
 
+  /* Styles */
+  .sec1text .discripton{
+    font-size: 0.9rem;
+  }
+  .sec1text .srname{
+    font-size: 1.5rem;
+  }
+  .rahul{
+    font-size: 2.3rem;
+  }
+  .sec1text{
+    line-height: 1px;
+  }
   .section2,
   .section3,
   .section4 {
     height: 50vh;
+  }
+  .section1 .scroll svg{
+    height: 6vh;
+    width: auto;
+  }
+  .section1 .scroll span{
+    font-size: 1em;
   }
 }
 
