@@ -179,11 +179,11 @@ body {
   .scroll {
 
     position: absolute;
-    right: 5vw;
+    left: 90.3%;
     bottom: 5vh;
 
     svg {
-      height: 30vh;
+      height: 25vh;
       width: auto;
     }
   }
@@ -771,10 +771,8 @@ footer {
   }
 
   .section1 .scroll {
-    right: 0px;
-
     svg {
-      height: 20vh;
+      height: 18vh;
       width: auto;
     }
   }
@@ -1031,7 +1029,7 @@ footer {
   }
 
   .section1 .scroll svg {
-    height: 16vh;
+    height: 12vh;
     width: auto;
   }
 }

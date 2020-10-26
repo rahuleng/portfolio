@@ -9,7 +9,7 @@ if (load == true) {
 	document.getElementById("block").style.display = "none";
 	gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1, x: -80, stagger: 0.3, delay: 0.5 })
 		.from(".mainimg", { opacity: 0, duration: 1, y: -50 }, "-=0.8")
-		.to(".contact", {opacity: 0.2, duration: 0.5,x: 0}, "-=0.5")
+		.to(".contact", {opacity: 0.15, duration: 0.5,x: 0}, "-=0.5")
 		.from(".scroll", { opacity: 0, duration: 0.5, y: -50 });
 }
 
@@ -18,7 +18,7 @@ if (document.getElementById("block").style.display != "none") {
 		document.getElementById("block").style.display = "none";
 		gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1.5, x: -80, stagger: 0.3, delay: 0.5 })
 			.from(".mainimg", { opacity: 0, duration: 1, y: -50 }, "-=0.9")
-			.to(".contact", {opacity: 0.2, duration: 0.5,x: 0}, "-=0.5")
+			.to(".contact", {opacity: 0.15, duration: 0.5,x: 0}, "-=0.5")
 			.from(".scroll", { opacity: 0, duration: 0.5, y: -50 });
 	});
 
