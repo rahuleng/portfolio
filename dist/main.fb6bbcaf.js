@@ -121,34 +121,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 if (window.innerWidth > 1300) {
   new SmoothScroll(document, 120, 12);
   console.log(true);
-} //zoom effect
-// if (navigator.userAgent.indexOf('Chrome') != -1) { 
-// 	gsap.from(".section2", {
-// 		scrollTrigger: {
-// 	  trigger: ".section2",   
-// 	},duration: 1, transform: "scale(1.2,1.2)"});
-// }
-// gsap.from(".sec5img", {
-// 	ease: "none",
-// 	backgroundPositionY: "70%",
-// 	scrollTrigger: {
-// 		trigger: ".section5",
-// 		scrub: 1,
-// 	},
-// });
-// for (let i = 3; i < 5; i++) {
-// 	gsap.from(".sec" + i + "img", {
-// 		y: 100,
-// 		ease: "none",
-// 		scrollTrigger: {
-// 			trigger: ".section" + i,
-// 			// start: "top bottom", // the default values
-// 			// end: "bottom top",
-// 			scrub: 1
-// 		},
-// 	});
-// }
-//smooth scroll
+} //smooth scroll
 
 
 function SmoothScroll(target, speed, smooth) {
@@ -227,7 +200,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51365" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59501" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

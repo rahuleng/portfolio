@@ -7160,15 +7160,16 @@ if (load == true) {
     delay: 0.5
   }).from(".mainimg", {
     opacity: 0,
-    duration: 1.5,
+    duration: 1,
     y: -50
-  }, "-=0.8").from(".scroll", {
+  }, "-=0.8").to(".contact", {
+    opacity: 0.2,
+    duration: 0.5,
+    x: 0
+  }, "-=0.5").from(".scroll", {
     opacity: 0,
     duration: 0.5,
     y: -50
-  }, "-=0.5").from(".contact", {
-    opacity: 0,
-    duration: 0.5
   });
 }
 
@@ -7184,13 +7185,17 @@ if (document.getElementById("block").style.display != "none") {
       delay: 0.5
     }).from(".mainimg", {
       opacity: 0,
-      duration: 1.5,
+      duration: 1,
       y: -50
-    }, "-=0.8").from(".scroll", {
+    }, "-=0.9").to(".contact", {
+      opacity: 0.2,
+      duration: 0.5,
+      x: 0
+    }, "-=0.5").from(".scroll", {
       opacity: 0,
-      duration: 1.5,
+      duration: 0.5,
       y: -50
-    }, "-=0.5");
+    });
   });
 }
 
@@ -7310,7 +7315,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51365" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59501" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
