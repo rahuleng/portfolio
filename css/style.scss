@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;700;900&display=swap');
 
-$Dark-green: #043d3d;
+$Dark-green: #043e3e;
 $Back-green: #02383ab6;
 $Orange: #e2d7a6;
 $loader:#afa472;
@@ -286,6 +286,23 @@ body {
   display: flex;
   justify-content: space-between;
   transform: scale(1, 1);
+
+  // .Click {
+  //   font-family: Jost;
+  //   top: 50%;
+  //   left: 20%;
+  //   color: #FFFFFF;
+  //   span{
+  //     color: #043e3e;
+  //   }
+  // }
+  // .Ellipse{
+  //   position: absolute;
+  //   bottom: 10%;
+  //   left: 80%;
+  //   height: 10vh;
+  //   width: 10vh;
+  // }
 }
 
 .laptop {
@@ -537,10 +554,19 @@ body {
     align-self: flex-end;
   }
 
-  svg {
+  .sec3next {
     height: 18vh;
     width: 18vh;
     cursor: pointer;
+    transition: 0.1s transform;
+  }
+
+  .sec3next:hover {
+    transform: scale(1.1, 1.1);
+  }
+
+  .sec3next:active {
+    transform: scale(0.8, 0.8);
   }
 
   .bg {
@@ -606,9 +632,9 @@ body {
 
   .arrow {
     position: absolute;
-    top: 0;
+    top: 5%;
     left: 30%;
-    width: 15vw;
+    width: 17vw;
   }
 
   .bg {
@@ -741,6 +767,7 @@ body {
 footer {
   height: 80px;
   width: 100vw;
+  padding: 10px;
   background-color: $Dark-green;
   position: absolute;
   bottom: 0px;
@@ -753,7 +780,7 @@ footer {
     font-family: 'Jost', sans-serif;
     font-weight: 300;
     font-size: 1.3em;
-    padding-top: 19px;
+    padding-top: 8px;
     font-weight: 400;
   }
 }
@@ -862,7 +889,9 @@ footer {
       height: 15vw;
       width: 15vw;
       margin: 4vw;
+
     }
+
   }
 
 
@@ -1001,7 +1030,14 @@ footer {
       width: 60vw;
     }
   }
+
+  footer {
+    h3 {
+      padding-top: 2px;
+    }
+  }
 }
+
 
 @media only screen and (max-width : 470px) {
 

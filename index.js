@@ -1,25 +1,27 @@
 import { gsap } from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-
+gsap.ticker.lagSmoothing(500, 16);
 var image = document.getElementById("mainimg");
 var load = image.complete;
 
 if (load == true) {
-	console.log("test");
+
 	document.getElementById("block").style.display = "none";
-	gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1, x: -80, stagger: 0.3, delay: 0.5 })
-		.from(".mainimg", { opacity: 0, duration: 1, y: -50 }, "-=0.8")
-		.to(".contact", {opacity: 0.15, duration: 0.5,x: 0}, "-=0.5")
-		.from(".scroll", { opacity: 0, duration: 0.5, y: -50 });
+	gsap.timeline().from(".sec1text", { opacity: 0, duration: 1, x: -80, ease: "power4.out",})
+		.from(".mainimg", { opacity: 0, duration: 0.8, y: -50 , ease: "power4.out",}, "-=0.5")
+		.to(".contact", {opacity: 0.15, duration: 0.5,x: 0, ease: "power4.out",}, "-=0.5")
+		.from(".scroll", { opacity: 0, duration: 0.5, y: -50, ease: "power4.out", },"-=0.5");
 }
 
 if (document.getElementById("block").style.display != "none") {
+	
 	document.getElementById("mainimg").addEventListener("load", () => {
+
 		document.getElementById("block").style.display = "none";
-		gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1.5, x: -80, stagger: 0.3, delay: 0.5 })
-			.from(".mainimg", { opacity: 0, duration: 1, y: -50 }, "-=0.9")
-			.to(".contact", {opacity: 0.15, duration: 0.5,x: 0}, "-=0.5")
-			.from(".scroll", { opacity: 0, duration: 0.5, y: -50 });
+		gsap.timeline().from(".sec1text", { opacity: 0, duration: 1, x: -80, ease: "power4.out",})
+			.from(".mainimg", { opacity: 0, duration: 0.8, y: -50 , ease: "power4.out",}, "-=0.5")
+			.to(".contact", {opacity: 0.15, duration: 0.5,x: 0, ease: "power4.out",}, "-=0.5")
+			.from(".scroll", { opacity: 0, duration: 0.5, y: -50 , ease: "power4.out",},"-=0.5");
 	});
 
 }
@@ -39,9 +41,7 @@ for (let i = 2; i < 6; i++) {
 	});
 };
 
-
 //parallex effect
-
 gsap.from(".sec2img", {
 	ease: "none",
 	backgroundPositionY: "0%",
@@ -49,25 +49,6 @@ gsap.from(".sec2img", {
 		trigger: ".section2",
 		scrub: 1,
 	},
-});
-
-
-gsap.from(".arrow", {
-	scrollTrigger: {
-		trigger: ".sec4img",
-		toggleActions: "play complete complete complete",
-		once: true,
-	}, // start the animation when ".box" enters the viewport (once)
-	x: "45%", duration:1,delay:0.5,
-});
-
-gsap.from(".sec3next", {
-	scrollTrigger: {
-		trigger: ".fleximgsec3",
-		toggleActions: "play complete complete complete",
-		once: true,
-	}, // start the animation when ".box" enters the viewport (once)
-	x: "-55%", duration: 1, delay:0.8,
 });
 
 var j = 0;

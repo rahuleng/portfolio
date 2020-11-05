@@ -7145,57 +7145,62 @@ var _gsap = require("gsap");
 
 var _ScrollTrigger = require("gsap/ScrollTrigger");
 
+_gsap.gsap.ticker.lagSmoothing(500, 16);
+
 var image = document.getElementById("mainimg");
 var load = image.complete;
 
 if (load == true) {
-  console.log("test");
   document.getElementById("block").style.display = "none";
 
-  _gsap.gsap.timeline().from(".sec1text span", {
+  _gsap.gsap.timeline().from(".sec1text", {
     opacity: 0,
     duration: 1,
     x: -80,
-    stagger: 0.3,
-    delay: 0.5
+    ease: "power4.out"
   }).from(".mainimg", {
     opacity: 0,
-    duration: 1,
-    y: -50
-  }, "-=0.8").to(".contact", {
+    duration: 0.8,
+    y: -50,
+    ease: "power4.out"
+  }, "-=0.5").to(".contact", {
     opacity: 0.15,
     duration: 0.5,
-    x: 0
+    x: 0,
+    ease: "power4.out"
   }, "-=0.5").from(".scroll", {
     opacity: 0,
     duration: 0.5,
-    y: -50
-  });
+    y: -50,
+    ease: "power4.out"
+  }, "-=0.5");
 }
 
 if (document.getElementById("block").style.display != "none") {
   document.getElementById("mainimg").addEventListener("load", function () {
     document.getElementById("block").style.display = "none";
 
-    _gsap.gsap.timeline().from(".sec1text span", {
-      opacity: 0,
-      duration: 1.5,
-      x: -80,
-      stagger: 0.3,
-      delay: 0.5
-    }).from(".mainimg", {
+    _gsap.gsap.timeline().from(".sec1text", {
       opacity: 0,
       duration: 1,
-      y: -50
-    }, "-=0.9").to(".contact", {
+      x: -80,
+      ease: "power4.out"
+    }).from(".mainimg", {
+      opacity: 0,
+      duration: 0.8,
+      y: -50,
+      ease: "power4.out"
+    }, "-=0.5").to(".contact", {
       opacity: 0.15,
       duration: 0.5,
-      x: 0
+      x: 0,
+      ease: "power4.out"
     }, "-=0.5").from(".scroll", {
       opacity: 0,
       duration: 0.5,
-      y: -50
-    });
+      y: -50,
+      ease: "power4.out"
+    }, "-=0.5");
   });
 }
 
@@ -7222,30 +7227,6 @@ _gsap.gsap.from(".sec2img", {
     trigger: ".section2",
     scrub: 1
   }
-});
-
-_gsap.gsap.from(".arrow", {
-  scrollTrigger: {
-    trigger: ".sec4img",
-    toggleActions: "play complete complete complete",
-    once: true
-  },
-  // start the animation when ".box" enters the viewport (once)
-  x: "45%",
-  duration: 1,
-  delay: 0.5
-});
-
-_gsap.gsap.from(".sec3next", {
-  scrollTrigger: {
-    trigger: ".fleximgsec3",
-    toggleActions: "play complete complete complete",
-    once: true
-  },
-  // start the animation when ".box" enters the viewport (once)
-  x: "-55%",
-  duration: 1,
-  delay: 0.8
 });
 
 var j = 0;
@@ -7315,7 +7296,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64229" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52916" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

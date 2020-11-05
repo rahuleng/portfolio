@@ -1,0 +1,135 @@
+{
+  "Ellipse": {
+    "anchorPoint": "MIDDLECENTER",
+    "keyframes": {
+      "arcData": [
+        {
+          "id": "7c91dc9a-0440-4437-925c-92758c08665a",
+          "ms": 0,
+          "property": "arcData",
+          "value": [
+            4.712399452360202,
+            1.5707963267948966,
+            0
+          ],
+          "easing": "linear",
+          "easingCurve": [
+            0.42,
+            0,
+            0.58,
+            1
+          ]
+        },
+        {
+          "id": "11149e7a-7993-4045-8be7-f89a4fb9bd0c",
+          "ms": 698,
+          "property": "arcData",
+          "value": [
+            4.7124,
+            -1.2845,
+            0
+          ],
+          "easing": "custom",
+          "easingCurve": [
+            0.43538461538461537,
+            0.03589743589743588,
+            0.23641025641025637,
+            1.0615384615384615
+          ]
+        },
+        {
+          "id": "d5b4b3c6-40ee-4bfc-a98f-e3dfbdca85b4",
+          "ms": 2100,
+          "property": "arcData",
+          "value": [
+            4.7124,
+            1.5707963267948966,
+            0
+          ],
+          "easing": "custom",
+          "easingCurve": [
+            0.2866666666666666,
+            0.010256410256410256,
+            0.15435897435897433,
+            0.9794871794871794
+          ]
+        }
+      ],
+      "rotation": [
+        {
+          "id": "1ae4f8cf-4ea8-4131-88be-027747a254c6",
+          "ms": 0,
+          "property": "rotation",
+          "value": 0,
+          "easing": "linear",
+          "easingCurve": [
+            0.42,
+            0,
+            0.58,
+            1
+          ]
+        },
+        {
+          "id": "6007a516-a577-427d-9628-225eb58c44c3",
+          "ms": 2101,
+          "property": "rotation",
+          "value": 720,
+          "easing": "custom",
+          "easingCurve": [
+            0.6558974358974359,
+            0.27692307692307694,
+            0.2825641025641025,
+            0.9487179487179487
+          ]
+        }
+      ]
+    }
+  },
+  "Click": {
+    "anchorPoint": "MIDDLECENTER",
+    "keyframes": {
+      "opacity": [
+        {
+          "id": "785206eb-cbe3-4466-920f-f4084f3fd2d4",
+          "ms": 0,
+          "property": "opacity",
+          "value": 1,
+          "easing": "linear",
+          "easingCurve": [
+            0.42,
+            0,
+            0.58,
+            1
+          ]
+        },
+        {
+          "id": "1b61e436-11aa-44bd-8557-5cb6918b354c",
+          "ms": 200,
+          "property": "opacity",
+          "value": 0,
+          "easing": "easeInOut",
+          "easingCurve": [
+            0.42,
+            0,
+            0.58,
+            1
+          ]
+        },
+        {
+          "id": "018444f6-7a8e-4d23-a7da-66a1b50cc608",
+          "ms": 2101,
+          "property": "opacity",
+          "value": 1,
+          "easing": "custom",
+          "easingCurve": [
+            0.42,
+            0,
+            0.2005128205128205,
+            0.9846153846153847
+          ]
+        }
+      ],
+      "width": []
+    }
+  }
+}

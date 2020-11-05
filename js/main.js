@@ -1,11 +1,8 @@
 
 
-if (window.innerWidth > 1300) {
+if (window.innerWidth > 1200) {
 	new SmoothScroll(document, 120, 12);
-	console.log(true);
 }
-
-
 
 //smooth scroll
 
