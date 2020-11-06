@@ -287,24 +287,27 @@ body {
   justify-content: space-between;
   transform: scale(1, 1);
 
-  // .Click {
-  //   font-family: Jost;
-  //   top: 50%;
-  //   left: 20%;
-  //   color: #FFFFFF;
-  //   span{
-  //     color: #043e3e;
-  //   }
-  // }
-  // .Ellipse{
-  //   position: absolute;
-  //   bottom: 10%;
-  //   left: 80%;
-  //   height: 10vh;
-  //   width: 10vh;
-  // }
+  .Click {
+    font-family: Jost;
+    top: 50%;
+    left: 20%;
+    color: #FFFFFF;
+    span{
+      color: #043e3e;
+    }
+  }
+  .Ellipse{
+    position: absolute;
+    bottom: 10%;
+    left: 80%;
+    height: 10vh;
+    width: 10vh;
+  }
+  
 }
-
+video::-webkit-media-controls {
+  display: none;
+}
 .laptop {
   position: relative;
   left: -10%;

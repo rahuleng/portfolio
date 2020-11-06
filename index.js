@@ -1,5 +1,10 @@
 import { gsap } from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+import anime from 'animejs/lib/anime.es.js';
+
+
+
 gsap.ticker.lagSmoothing(500, 16);
 var image = document.getElementById("mainimg");
 var load = image.complete;
@@ -26,28 +31,34 @@ if (document.getElementById("block").style.display != "none") {
 
 }
 
-gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+gsap.registerPlugin( ScrollTrigger);
 
 //text flot
 for (let i = 2; i < 6; i++) {
 
 	gsap.from(".sec" + i + "text", {
 		y: 270,
-		ease: "none",
+		ease: "power4.out",
+		duration: 1.3,
 		scrollTrigger: {
-			trigger: ".section" + i,
-			scrub: 1
+			trigger: ".sec" + i + "text",
+			toggleActions: "play reset play reset",
 		},
 	});
 };
 
 //parallex effect
 gsap.from(".sec2img", {
-	ease: "none",
+	ease: "power4.out",
 	backgroundPositionY: "0%",
+	duration: 1.3,
 	scrollTrigger: {
-		trigger: ".section2",
-		scrub: 1,
+		trigger: ".sec2img",
+		toggleActions: "play reset play reset",
 	},
 });
 
@@ -66,12 +77,4 @@ document.querySelector(".sec3next").addEventListener("click", () => {
 
 });
 
-// document.querySelector(".round").addEventListener("click", () => {
-// 	document.getElementById("temp").className = "anim";
-// 	document.getElementById("temp1").className = "anim";
-// 	setTimeout(function(){ 
-// 		document.getElementById("temp").className = "";
-// 		document.getElementById("temp1").className = "";
 
-// 	 }, 8000);
-// });

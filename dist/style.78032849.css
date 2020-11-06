@@ -339,6 +339,29 @@ body {
   top: 40%;
 }
 
+.section2 .Click {
+  font-family: Jost;
+  top: 50%;
+  left: 20%;
+  color: #FFFFFF;
+}
+
+.section2 .Click span {
+  color: #043e3e;
+}
+
+.section2 .Ellipse {
+  position: absolute;
+  bottom: 10%;
+  left: 80%;
+  height: 10vh;
+  width: 10vh;
+}
+
+video::-webkit-media-controls {
+  display: none;
+}
+
 .laptop {
   position: relative;
   left: -10%;

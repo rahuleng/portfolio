@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/rahuleng/portfolio#readme",
   "dependencies": {
+    "animejs": "^3.2.1",
     "gsap": "^3.5.1"
   },
   "devDependencies": {
