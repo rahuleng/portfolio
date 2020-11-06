@@ -1,9 +1,6 @@
 import { gsap } from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
-import anime from 'animejs/lib/anime.es.js';
-
-
 
 gsap.ticker.lagSmoothing(500, 16);
 var image = document.getElementById("mainimg");
@@ -41,12 +38,11 @@ gsap.registerPlugin( ScrollTrigger);
 for (let i = 2; i < 6; i++) {
 
 	gsap.from(".sec" + i + "text", {
-		y: 270,
-		ease: "power4.out",
-		duration: 1.3,
+		y: 200,
+		ease: "none",
 		scrollTrigger: {
-			trigger: ".sec" + i + "text",
-			toggleActions: "play reset play reset",
+			trigger: ".section" + i,
+			scrub: 0.5
 		},
 	});
 };
