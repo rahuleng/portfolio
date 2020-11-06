@@ -2,28 +2,28 @@ import { gsap } from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 
-gsap.ticker.lagSmoothing(500, 16);
+// gsap.ticker.fps(30);
+// gsap.ticker.lagSmoothing(500, 16);
+
 var image = document.getElementById("mainimg");
 var load = image.complete;
 
 if (load == true) {
-
+	console.log("sds");
 	document.getElementById("block").style.display = "none";
-	gsap.timeline().from(".sec1text", { opacity: 0, duration: 1, x: -80, ease: "power4.out",})
-		.from(".mainimg", { opacity: 0, duration: 0.8, y: -50 , ease: "power4.out",}, "-=0.5")
-		.to(".contact", {opacity: 0.15, duration: 0.5,x: 0, ease: "power4.out",}, "-=0.5")
-		.from(".scroll", { opacity: 0, duration: 0.5, y: -50, ease: "power4.out", },"-=0.5");
+	gsap.timeline().from(".sec1text span", { opacity: 0, duration: 0.6, x: -50,stagger: 0.5})
+				.to(".contact", {opacity: 0.15, duration: 0.3, x: 0})
+				.from(".scroll", { opacity: 0, duration: 0.3, y: -50 });
 }
 
 if (document.getElementById("block").style.display != "none") {
 	
 	document.getElementById("mainimg").addEventListener("load", () => {
-
+		
 		document.getElementById("block").style.display = "none";
-		gsap.timeline().from(".sec1text", { opacity: 0, duration: 1, x: -80, ease: "power4.out",})
-			.from(".mainimg", { opacity: 0, duration: 0.8, y: -50 , ease: "power4.out",}, "-=0.5")
-			.to(".contact", {opacity: 0.15, duration: 0.5,x: 0, ease: "power4.out",}, "-=0.5")
-			.from(".scroll", { opacity: 0, duration: 0.5, y: -50 , ease: "power4.out",},"-=0.5");
+		gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1, x: -80 })
+			.to(".contact", {opacity:  0.15, duration: 0.5,x: 0})
+			.from(".scroll", { opacity: 0, duration: 0.5, y: -50 });
 	});
 
 }
@@ -38,7 +38,7 @@ gsap.registerPlugin( ScrollTrigger);
 for (let i = 2; i < 6; i++) {
 
 	gsap.from(".sec" + i + "text", {
-		y: 200,
+		y: 250,
 		ease: "none",
 		scrollTrigger: {
 			trigger: ".section" + i,
@@ -51,7 +51,8 @@ for (let i = 2; i < 6; i++) {
 gsap.from(".sec2img", {
 	ease: "power4.out",
 	backgroundPositionY: "0%",
-	duration: 1.3,
+	duration: 1,
+	delay: 0.2,
 	scrollTrigger: {
 		trigger: ".sec2img",
 		toggleActions: "play reset play reset",
