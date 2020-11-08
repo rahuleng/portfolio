@@ -119,12 +119,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"js/main.js":[function(require,module,exports) {
 if (window.innerWidth > 1400) {
-  console.log("smooth");
   new SmoothScroll(document, 120, 5);
 } //smooth scroll
 
 
 function SmoothScroll(target, speed, smooth) {
+  console.log("smooth");
   if (target === document) target = document.scrollingElement || document.documentElement || document.body.parentNode || document.body; // cross browser support for document scrolling
 
   var moving = false;
@@ -200,7 +200,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51718" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55009" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

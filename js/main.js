@@ -1,7 +1,7 @@
 
 
 if (window.innerWidth > 1400) {
-	console.log("smooth");
+	
 	new SmoothScroll(document, 120, 5);
 }
 
@@ -9,6 +9,7 @@ if (window.innerWidth > 1400) {
 
 
 function SmoothScroll(target, speed, smooth) {
+	console.log("smooth");
 	if (target === document)
 		target = (document.scrollingElement
 			|| document.documentElement

@@ -153,7 +153,9 @@ body {
   font-family: 'Jost', sans-serif;
   font-size: 15rem;
 }
-
+*, *:before, *:after {
+    box-sizing: border-box;
+}
 .noselect {
   -webkit-touch-callout: none;
   /* iOS Safari */
@@ -181,6 +183,8 @@ body {
     position: absolute;
     left: 90.3%;
     bottom: 5vh;
+    opacity: 0;
+    transform: translateY(-100px);
 
     svg {
       height: 25vh;
@@ -205,19 +209,26 @@ body {
   font-family: 'Jost', sans-serif;
   font-size: 6em;
   font-weight: 400;
-  opacity: 1;
   z-index: 1;
-  color: $Dark-green;
   line-height: 60px;
   text-align: right;
   position: absolute;
   top: 10%;
   right: 32%;
 
+  .rahul{
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-100px);
+
+  }
   .srname {
     font-size: 2.6rem;
     text-align: right;
     line-height: 70px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-100px);
   }
 
   .discripton {
@@ -225,7 +236,14 @@ body {
     font-weight: 300;
     display: block;
     line-height: 1;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-100px);
+    width: fit-content;
+    height: fit-content;
   }
+
+
 }
 
 .dis {
@@ -278,41 +296,33 @@ body {
     left: 50%;
     top: 40%;
   }
-
   position: relative;
   width: 100vw;
   height: 100vh;
   margin-top: 10%;
   display: flex;
   justify-content: space-between;
-  transform: scale(1, 1);
-
-  .Click {
-    font-family: Jost;
-    top: 50%;
-    left: 20%;
-    color: #FFFFFF;
-    span{
-      color: #043e3e;
-    }
-  }
+  flex-wrap: wrap;
   .Ellipse{
     position: absolute;
     bottom: 10%;
-    left: 80%;
-    height: 10vh;
-    width: 10vh;
+    left: 78%;
+    height: 20vh;
+    width: 20vh;
+    #lottie{
+      height: 100%;
+      width: 100%;
+      opacity: 0.6;
+    }
   }
   
 }
-video::-webkit-media-controls {
-  display: none;
-}
+
 .laptop {
   position: relative;
   left: -10%;
   background-image: url("/img/Qarothome.jpg");
-  background-position: -8vw 30%;
+  background-position: -8vw 29%;
   width: 70%;
   height: 88%;
   background-size: cover;
@@ -792,6 +802,9 @@ footer {
 
 /* Tablets (portrait) ----------- */
 @media (max-width : 1300px) {
+  #lottie{
+    display: none;
+  }
   .rahul {
     font-size: 3.5rem;
   }
@@ -911,6 +924,7 @@ footer {
 
   .laptop {
     width: 80%;
+    margin-bottom: 3%;
     height: auto;
     background-position: -9.5vw 70%;
   }

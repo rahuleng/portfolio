@@ -7145,48 +7145,66 @@ var _gsap = require("gsap");
 
 var _ScrollTrigger = require("gsap/ScrollTrigger");
 
-// gsap.ticker.fps(30);
-// gsap.ticker.lagSmoothing(500, 16);
+_gsap.gsap.ticker.deltaRatio(60);
+
 var image = document.getElementById("mainimg");
 var load = image.complete;
+var loaderdiv = document.getElementById("block");
+
+_gsap.gsap.from(loaderdiv, {
+  duration: 0.5,
+  y: "100%"
+});
 
 if (load == true) {
-  console.log("sds");
-  document.getElementById("block").style.display = "none";
-
-  _gsap.gsap.timeline().from(".sec1text span", {
-    opacity: 0,
-    duration: 0.6,
-    x: -50,
-    stagger: 0.5
-  }).to(".contact", {
-    opacity: 0.15,
-    duration: 0.3,
-    x: 0
-  }).from(".scroll", {
-    opacity: 0,
-    duration: 0.3,
-    y: -50
+  _gsap.gsap.to(loaderdiv, {
+    duration: 0.5,
+    y: "-100%"
   });
+
+  setTimeout(function () {
+    loaderdiv.style.display = "none";
+
+    _gsap.gsap.timeline().to(".sec1text span", {
+      opacity: 0.9,
+      x: 0,
+      stagger: 0.1
+    }).to(".contact", {
+      opacity: 0.15,
+      duration: 0.2,
+      x: 0
+    }).to(".scroll", {
+      opacity: 1,
+      duration: 0.2,
+      y: 0
+    });
+  }, 1050);
 }
 
 if (document.getElementById("block").style.display != "none") {
   document.getElementById("mainimg").addEventListener("load", function () {
-    document.getElementById("block").style.display = "none";
-
-    _gsap.gsap.timeline().from(".sec1text span", {
-      opacity: 0,
-      duration: 1,
-      x: -80
-    }).to(".contact", {
-      opacity: 0.15,
+    _gsap.gsap.to(loaderdiv, {
       duration: 0.5,
-      x: 0
-    }).from(".scroll", {
-      opacity: 0,
-      duration: 0.5,
-      y: -50
+      y: "-100%"
     });
+
+    setTimeout(function () {
+      loaderdiv.style.display = "none";
+
+      _gsap.gsap.timeline().to(".sec1text span", {
+        opacity: 0.9,
+        x: 0,
+        stagger: 0.1
+      }).to(".contact", {
+        opacity: 0.15,
+        duration: 0.3,
+        x: 0
+      }).to(".scroll", {
+        opacity: 1,
+        duration: 0.3,
+        y: 0
+      });
+    }, 1050);
   });
 }
 
@@ -7204,18 +7222,20 @@ for (var i = 2; i < 6; i++) {
   });
 }
 
-; //parallex effect
+;
 
-_gsap.gsap.from(".sec2img", {
-  ease: "power4.out",
-  backgroundPositionY: "0%",
-  duration: 1,
-  delay: 0.2,
-  scrollTrigger: {
-    trigger: ".sec2img",
-    toggleActions: "play reset play reset"
-  }
-});
+if (window.innerWidth > 1400) {
+  //parallex effect
+  _gsap.gsap.from(".laptop", {
+    ease: "none",
+    backgroundPositionY: "0%",
+    scrollTrigger: {
+      trigger: ".laptop",
+      toggleActions: "play reset play reset",
+      scrub: 0.5
+    }
+  });
+}
 
 var j = 0;
 document.querySelector(".sec3next").addEventListener("click", function () {
@@ -7277,7 +7297,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51718" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55009" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

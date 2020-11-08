@@ -1,38 +1,48 @@
 import { gsap } from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
-// gsap.ticker.fps(30);
-// gsap.ticker.lagSmoothing(500, 16);
+gsap.ticker.deltaRatio(60);
 
 var image = document.getElementById("mainimg");
 var load = image.complete;
+var loaderdiv = document.getElementById("block");
+
+gsap.from(loaderdiv, { duration: 0.5, y: "100%" });
 
 if (load == true) {
-	console.log("sds");
-	document.getElementById("block").style.display = "none";
-	gsap.timeline().from(".sec1text span", { opacity: 0, duration: 0.6, x: -50,stagger: 0.5})
-				.to(".contact", {opacity: 0.15, duration: 0.3, x: 0})
-				.from(".scroll", { opacity: 0, duration: 0.3, y: -50 });
+	gsap.to(loaderdiv, { duration: 0.5, y: "-100%" });
+	setTimeout(function () {
+		loaderdiv.style.display = "none";
+
+		gsap.timeline().to(".sec1text span", { opacity: 0.9, x: 0, stagger: 0.1 })
+			.to(".contact", { opacity: 0.15, duration: 0.2, x: 0 })
+			.to(".scroll", { opacity: 1, duration: 0.2, y: 0 });
+
+
+	}, 1050);
+
 }
 
 if (document.getElementById("block").style.display != "none") {
-	
+
 	document.getElementById("mainimg").addEventListener("load", () => {
-		
-		document.getElementById("block").style.display = "none";
-		gsap.timeline().from(".sec1text span", { opacity: 0, duration: 1, x: -80 })
-			.to(".contact", {opacity:  0.15, duration: 0.5,x: 0})
-			.from(".scroll", { opacity: 0, duration: 0.5, y: -50 });
+
+		gsap.to(loaderdiv, { duration: 0.5, y: "-100%" });
+
+		setTimeout(function () {
+			loaderdiv.style.display = "none";
+
+
+			gsap.timeline().to(".sec1text span", { opacity: 0.9, x: 0, stagger: 0.1 })
+				.to(".contact", { opacity: 0.15, duration: 0.3, x: 0 })
+				.to(".scroll", { opacity: 1, duration: 0.3, y: 0 });
+
+		}, 1050);
 	});
 
 }
 
-
-
-
-
-gsap.registerPlugin( ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 //text flot
 for (let i = 2; i < 6; i++) {
@@ -47,17 +57,23 @@ for (let i = 2; i < 6; i++) {
 	});
 };
 
-//parallex effect
-gsap.from(".sec2img", {
-	ease: "power4.out",
-	backgroundPositionY: "0%",
-	duration: 1,
-	delay: 0.2,
-	scrollTrigger: {
-		trigger: ".sec2img",
-		toggleActions: "play reset play reset",
-	},
-});
+if (window.innerWidth > 1400) {
+
+	//parallex effect
+	gsap.from(".laptop", {
+		ease: "none",
+		backgroundPositionY: "0%",
+		scrollTrigger: {
+			trigger: ".laptop",
+			toggleActions: "play reset play reset",
+			scrub: 0.5,
+		},
+	});
+}
+
+
+
+
 
 var j = 0;
 
@@ -73,5 +89,4 @@ document.querySelector(".sec3next").addEventListener("click", () => {
 	}
 
 });
-
 

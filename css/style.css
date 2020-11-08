@@ -195,6 +195,11 @@ body {
   font-size: 15rem;
 }
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .noselect {
   -webkit-touch-callout: none;
   /* iOS Safari */
@@ -220,6 +225,9 @@ body {
   position: absolute;
   left: 90.3%;
   bottom: 5vh;
+  opacity: 0;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
 .section1 .scroll svg {
@@ -245,9 +253,7 @@ body {
   font-family: 'Jost', sans-serif;
   font-size: 6em;
   font-weight: 400;
-  opacity: 1;
   z-index: 1;
-  color: #043e3e;
   line-height: 60px;
   text-align: right;
   position: absolute;
@@ -255,10 +261,21 @@ body {
   right: 32%;
 }
 
+.sec1text .rahul {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
 .sec1text .srname {
   font-size: 2.6rem;
   text-align: right;
   line-height: 70px;
+  display: inline-block;
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
 }
 
 .sec1text .discripton {
@@ -266,6 +283,16 @@ body {
   font-weight: 300;
   display: block;
   line-height: 1;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .dis {
@@ -330,8 +357,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .section2 .bg {
@@ -339,34 +366,25 @@ body {
   top: 40%;
 }
 
-.section2 .Click {
-  font-family: Jost;
-  top: 50%;
-  left: 20%;
-  color: #FFFFFF;
-}
-
-.section2 .Click span {
-  color: #043e3e;
-}
-
 .section2 .Ellipse {
   position: absolute;
   bottom: 10%;
-  left: 80%;
-  height: 10vh;
-  width: 10vh;
+  left: 78%;
+  height: 20vh;
+  width: 20vh;
 }
 
-video::-webkit-media-controls {
-  display: none;
+.section2 .Ellipse #lottie {
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
 }
 
 .laptop {
   position: relative;
   left: -10%;
   background-image: url("/img/Qarothome.jpg");
-  background-position: -8vw 30%;
+  background-position: -8vw 29%;
   width: 70%;
   height: 88%;
   background-size: cover;
@@ -862,6 +880,9 @@ footer h3 {
 
 /* Tablets (portrait) ----------- */
 @media (max-width: 1300px) {
+  #lottie {
+    display: none;
+  }
   .rahul {
     font-size: 3.5rem;
   }
@@ -961,6 +982,7 @@ footer h3 {
   }
   .laptop {
     width: 80%;
+    margin-bottom: 3%;
     height: auto;
     background-position: -9.5vw 70%;
   }
