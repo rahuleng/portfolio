@@ -7151,17 +7151,13 @@ var image = document.getElementById("mainimg");
 var load = image.complete;
 var loaderdiv = document.getElementById("block");
 
-_gsap.gsap.from(loaderdiv, {
-  duration: 0.5,
-  y: "100%"
-});
-
 if (load == true) {
-  _gsap.gsap.to(loaderdiv, {
-    duration: 0.5,
-    y: "-100%"
-  });
-
+  setTimeout(function () {
+    _gsap.gsap.to(loaderdiv, {
+      duration: 0.5,
+      y: "-100%"
+    });
+  }, 1000);
   setTimeout(function () {
     loaderdiv.style.display = "none";
 
@@ -7178,16 +7174,17 @@ if (load == true) {
       duration: 0.2,
       y: 0
     });
-  }, 1050);
+  }, 1500);
 }
 
 if (document.getElementById("block").style.display != "none") {
   document.getElementById("mainimg").addEventListener("load", function () {
-    _gsap.gsap.to(loaderdiv, {
-      duration: 0.5,
-      y: "-100%"
-    });
-
+    setTimeout(function () {
+      _gsap.gsap.to(loaderdiv, {
+        duration: 0.5,
+        y: "-100%"
+      });
+    }, 1000);
     setTimeout(function () {
       loaderdiv.style.display = "none";
 
@@ -7204,7 +7201,7 @@ if (document.getElementById("block").style.display != "none") {
         duration: 0.3,
         y: 0
       });
-    }, 1050);
+    }, 1500);
   });
 }
 
@@ -7297,7 +7294,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62905" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63034" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -7473,4 +7470,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+//# sourceMappingURL=/port.e31bb0bc.js.map

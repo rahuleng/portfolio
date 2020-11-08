@@ -153,9 +153,13 @@ body {
   font-family: 'Jost', sans-serif;
   font-size: 15rem;
 }
-*, *:before, *:after {
-    box-sizing: border-box;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
+
 .noselect {
   -webkit-touch-callout: none;
   /* iOS Safari */
@@ -181,14 +185,43 @@ body {
   .scroll {
 
     position: absolute;
-    left: 90.3%;
-    bottom: 5vh;
+    left: 93%;
+    bottom: 3vh;
     opacity: 0;
     transform: translateY(-100px);
 
-    svg {
-      height: 25vh;
-      width: auto;
+    .rect {
+      /* Rectangle 1 */
+      position: relative;
+      height: 15vh;
+      width: 5vh;
+      opacity: 0.7;
+      background: #043E3E;
+      border-radius: 180px;
+
+    }
+
+    .nob {
+      /* Ellipse 3 */
+      position: relative;
+      height: 3vh;
+      width: 3vh;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: #FFFFF0;
+      animation: 3s cubic-bezier(.19,1,.22,1)   infinite both  ellipse3;
+      
+    }
+    @keyframes ellipse3 {
+      0% {
+        transform: translateY(11vh);
+      }
+      40% {
+        transform: translateY(1vh);
+      }
+      100% {
+        transform: translateY(11vh);
+      }
     }
   }
 }
@@ -215,13 +248,15 @@ body {
   position: absolute;
   top: 10%;
   right: 32%;
+  color: #043e3e;
 
-  .rahul{
+  .rahul {
     display: inline-block;
     opacity: 0;
     transform: translateX(-100px);
 
   }
+
   .srname {
     font-size: 2.6rem;
     text-align: right;
@@ -296,6 +331,7 @@ body {
     left: 50%;
     top: 40%;
   }
+
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -303,19 +339,21 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  .Ellipse{
+
+  .Ellipse {
     position: absolute;
     bottom: 10%;
     left: 78%;
     height: 20vh;
     width: 20vh;
-    #lottie{
+
+    #lottie {
       height: 100%;
       width: 100%;
       opacity: 0.6;
     }
   }
-  
+
 }
 
 .laptop {
@@ -802,9 +840,10 @@ footer {
 
 /* Tablets (portrait) ----------- */
 @media (max-width : 1300px) {
-  #lottie{
-    display: none;
-  }
+ .Ellipse{
+   display: none;
+ }
+
   .rahul {
     font-size: 3.5rem;
   }
@@ -941,7 +980,7 @@ footer {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 770px) {
-
+ 
   .section2 {
     margin: 0;
     flex-direction: column;
@@ -1053,6 +1092,14 @@ footer {
       padding-top: 2px;
     }
   }
+
+  .section1{
+    .scroll{
+      .rect{
+        display: none;
+       }
+    }
+  }
 }
 
 
@@ -1090,7 +1137,3 @@ footer {
 ::-webkit-scrollbar {
   display: none;
 }
-
-
-
-

@@ -14,8 +14,8 @@ import * as bodymovin from "lottie-web";
     animation.play();
 
     setTimeout(function(){
-      animation.pause()
-    }, 210);
+      animation.stop()
+    }, 2100);
   })
 
   

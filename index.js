@@ -7,10 +7,14 @@ var image = document.getElementById("mainimg");
 var load = image.complete;
 var loaderdiv = document.getElementById("block");
 
-gsap.from(loaderdiv, { duration: 0.5, y: "100%" });
+
 
 if (load == true) {
-	gsap.to(loaderdiv, { duration: 0.5, y: "-100%" });
+
+	setTimeout (()=>{
+		gsap.to(loaderdiv, { duration: 0.5, y: "-100%" });
+	},1000);
+	
 	setTimeout(function () {
 		loaderdiv.style.display = "none";
 
@@ -19,7 +23,7 @@ if (load == true) {
 			.to(".scroll", { opacity: 1, duration: 0.2, y: 0 });
 
 
-	}, 1050);
+	}, 1500);
 
 }
 
@@ -27,7 +31,9 @@ if (document.getElementById("block").style.display != "none") {
 
 	document.getElementById("mainimg").addEventListener("load", () => {
 
-		gsap.to(loaderdiv, { duration: 0.5, y: "-100%" });
+		setTimeout (()=>{
+			gsap.to(loaderdiv, { duration: 0.5, y: "-100%" });
+		},1000);
 
 		setTimeout(function () {
 			loaderdiv.style.display = "none";
@@ -37,7 +43,7 @@ if (document.getElementById("block").style.display != "none") {
 				.to(".contact", { opacity: 0.15, duration: 0.3, x: 0 })
 				.to(".scroll", { opacity: 1, duration: 0.3, y: 0 });
 
-		}, 1050);
+		}, 1500);
 	});
 
 }
