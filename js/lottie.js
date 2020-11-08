@@ -12,10 +12,10 @@ import * as bodymovin from "lottie-web";
 
   document.getElementById('lottie').addEventListener("click", () => {
     animation.play();
-    
+
     setTimeout(function(){
       animation.pause()
-    }, 2000);
+    }, 210);
   })
 
   
