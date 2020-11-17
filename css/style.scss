@@ -4,6 +4,8 @@ $Dark-green: #043e3e;
 $Back-green: #02383ab6;
 $Orange: #e2d7a6;
 $loader:#afa472;
+$pink: #d5407d;
+
 
 * {
   box-sizing: border-box;
@@ -154,11 +156,7 @@ body {
   font-size: 15rem;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+
 
 .noselect {
   -webkit-touch-callout: none;
@@ -181,61 +179,26 @@ body {
   height: 100vh;
   width: 100vw;
   position: relative;
-
+  overflow: hidden;
   .scroll {
-
     position: absolute;
-    left: 93%;
+    right: 30%;
     bottom: 3vh;
     opacity: 0;
-    transform: translateY(-100px);
-
-    .rect {
-      /* Rectangle 1 */
-      position: relative;
-      height: 15vh;
-      width: 5vh;
-      opacity: 0.7;
-      background: #043E3E;
-      border-radius: 180px;
-
-    }
-
-    .nob {
-      /* Ellipse 3 */
-      position: relative;
-      height: 3vh;
-      width: 3vh;
-      margin: 0 auto;
-      border-radius: 50%;
-      background: #FFFFF0;
-      animation: 3s cubic-bezier(.19,1,.22,1)   infinite both  ellipse3;
-      
-    }
-    @keyframes ellipse3 {
-      0% {
-        transform: translateY(11vh);
-      }
-      40% {
-        transform: translateY(1vh);
-      }
-      100% {
-        transform: translateY(11vh);
-      }
-    }
   }
 }
 
 .mainimg {
   height: 100vh;
-  width: 20%;
+  width: auto;
   opacity: 1;
   position: absolute;
   z-index: -1;
-  top: 0%;
-  left: 70%;
+  bottom: 0%;
+  left: 56%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: 50%;
+  
 }
 
 .sec1text {
@@ -312,16 +275,6 @@ body {
   bottom: 15vh;
 }
 
-.draw_text {
-  position: absolute;
-  bottom: 10vh;
-  left: 40vw;
-
-  svg {
-    width: 60vw;
-    height: auto;
-  }
-}
 
 
 
@@ -358,9 +311,9 @@ body {
 
 .laptop {
   position: relative;
-  left: -10%;
+  left: -15%;
   background-image: url("/img/Qarothome.jpg");
-  background-position: -8vw 29%;
+  background-position: -1vw 29%;
   width: 70%;
   height: 88%;
   background-size: cover;
@@ -369,16 +322,10 @@ body {
 }
 
 .iphone {
-  background-image: url("/img/qarotmobile.jpg");
-  margin-right: 8%;
-  background-size: cover;
-  max-width: 280px;
-  max-height: 560px;
-  width: 20%;
-  height: auto;
-  background-repeat: no-repeat;
-  background-position: 0 60%;
-  border-radius: 11%;
+  
+  margin-right: 6%;
+  height: 45vh;
+  width: auto;
 }
 
 .sec2text {
@@ -840,8 +787,12 @@ footer {
 
 /* Tablets (portrait) ----------- */
 @media (max-width : 1300px) {
+  .mainimg{
+    width: 38%;
+    left: 69%;
+  }
  .Ellipse{
-   display: none;
+   top: 10%;
  }
 
   .rahul {
@@ -965,13 +916,11 @@ footer {
     width: 80%;
     margin-bottom: 3%;
     height: auto;
-    background-position: -9.5vw 70%;
   }
 
   .iphone {
     align-self: flex-end;
-    width: 16%;
-    height: auto;
+    height: 26vh;
   }
 
 
@@ -980,17 +929,31 @@ footer {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 770px) {
- 
+
+  #block::after{
+    content: "For best experience visit this site on a desktop.";
+    display: block;
+    text-align: center;
+    margin-top: 30vh;
+    font-size: 2.5em;
+    color: #fffff0;
+    font-family: 'Jost', sans-serif;
+  }
+  .Ellipse{
+    display: none;
+  }
   .section2 {
     margin: 0;
     flex-direction: column;
     justify-content: center;
 
   }
-
-  .iphone {
-    width: 18%;
+  .scroll{
+    width: 15%;
     height: auto;
+  }
+  .iphone {
+    height: 23vh;
   }
 
   .section5 {
@@ -1104,6 +1067,10 @@ footer {
 
 
 @media only screen and (max-width : 470px) {
+
+  .iphone {
+    height: 18vh;
+  }
 
   /* Styles */
   .sec1text .discripton {
