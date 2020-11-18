@@ -19,7 +19,7 @@ if (load == true) {
 		loaderdiv.style.display = "none";
 
 		gsap.timeline().to(".sec1text span", { opacity: 0.9, x: 0, stagger: 0.1 })
-			.to(".contact", { opacity: 0.15, duration: 0.2, x: 0 })
+			.to(".links", { opacity: 1, duration: 0.2, x: 0 })
 			.to(".scroll", { opacity: 1, duration: 0.2, y: 0 });
 
 
@@ -40,7 +40,7 @@ if (document.getElementById("block").style.display != "none") {
 
 
 			gsap.timeline().to(".sec1text span", { opacity: 0.9, x: 0, stagger: 0.1 })
-				.to(".contact", { opacity: 0.15, duration: 0.3, x: 0 })
+				.to(".links", { opacity: 1, duration: 0.3, x: 0 })
 				.to(".scroll", { opacity: 1, duration: 0.3, y: 0 });
 
 		}, 1500);

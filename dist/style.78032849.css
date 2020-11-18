@@ -214,28 +214,38 @@ body {
   height: 100vh;
   width: 100vw;
   position: relative;
-  overflow: hidden;
 }
 
 .section1 .scroll {
   position: absolute;
-  right: 30%;
-  bottom: 3vh;
+  left: 24%;
+  bottom: 7vh;
   opacity: 0;
 }
 
+.section1 .flexsec1 {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .mainimg {
-  height: 100vh;
+  height: 90vh;
   width: auto;
   opacity: 1;
-  position: absolute;
   z-index: -1;
-  bottom: 0%;
-  left: 56%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50%;
-     object-position: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .sec1text {
@@ -243,12 +253,13 @@ body {
   font-size: 6em;
   font-weight: 400;
   z-index: 1;
-  line-height: 60px;
-  text-align: right;
-  position: absolute;
-  top: 10%;
-  right: 32%;
+  text-align: center;
   color: #043e3e;
+  width: 55%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  line-height: 50px;
 }
 
 .sec1text .rahul {
@@ -260,12 +271,11 @@ body {
 
 .sec1text .srname {
   font-size: 2.6rem;
-  text-align: right;
-  line-height: 70px;
   display: inline-block;
   opacity: 0;
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
+  margin-bottom: 40px;
 }
 
 .sec1text .discripton {
@@ -277,52 +287,19 @@ body {
   opacity: 0;
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
-.dis {
-  position: absolute;
-  left: 1%;
-  bottom: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.dis a {
-  width: 3vw;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-.dis svg {
-  height: 48px;
-  width: 48px;
-  margin-bottom: 2vh;
-}
-
-.contact {
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 15em;
+.sec1text .links {
+  color: #d5407d;
+  display: inline-block;
+  font-size: 1.4rem;
   opacity: 0;
-  color: #043e3e;
-  position: absolute;
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
-  left: -90px;
-  bottom: 15vh;
+}
+
+.sec1text .links a {
+  text-decoration: none;
 }
 
 .section2 {
@@ -852,15 +829,11 @@ footer h3 {
 
 /* Tablets (portrait) ----------- */
 @media (max-width: 1300px) {
-  .mainimg {
-    width: 38%;
-    left: 69%;
-  }
   .Ellipse {
     top: 10%;
   }
   .rahul {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
   }
   .sec4text {
     top: 30%;
@@ -970,12 +943,37 @@ footer h3 {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 770px) {
+  .section1 .flexsec1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80%;
+    margin-top: 10%;
+  }
+  .section1 .sec1text {
+    height: 40%;
+    width: 80%;
+  }
+  .section1 .sec1text .srname {
+    margin-bottom: 10px;
+  }
+  .section1 .sec1text .discripton {
+    margin-bottom: 10px;
+  }
+  .section1 .mainimg {
+    height: 50vh;
+    width: auto;
+  }
+  .section1 .scroll {
+    left: 43%;
+  }
   #block::after {
     content: "For best experience visit this site on a desktop.";
     display: block;
     text-align: center;
     margin-top: 30vh;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #fffff0;
     font-family: 'Jost', sans-serif;
   }
@@ -1101,10 +1099,7 @@ footer h3 {
     font-size: 1.5rem;
   }
   .rahul {
-    font-size: 2.3rem;
-  }
-  .sec1text {
-    line-height: 1px;
+    font-size: 2.8rem;
   }
   .section2,
   .section3,

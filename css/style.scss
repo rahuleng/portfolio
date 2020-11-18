@@ -179,26 +179,29 @@ body {
   height: 100vh;
   width: 100vw;
   position: relative;
-  overflow: hidden;
+  
   .scroll {
     position: absolute;
-    right: 30%;
-    bottom: 3vh;
+    left: 24%;
+    bottom: 7vh;
     opacity: 0;
+  }
+  .flexsec1{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
   }
 }
 
 .mainimg {
-  height: 100vh;
+  height: 90vh;
   width: auto;
   opacity: 1;
-  position: absolute;
   z-index: -1;
-  bottom: 0%;
-  left: 56%;
-  object-fit: cover;
-  object-position: 50%;
-  
+  object-fit: cover;  
+  align-self: center;
 }
 
 .sec1text {
@@ -206,27 +209,23 @@ body {
   font-size: 6em;
   font-weight: 400;
   z-index: 1;
-  line-height: 60px;
-  text-align: right;
-  position: absolute;
-  top: 10%;
-  right: 32%;
+  text-align: center;
   color: #043e3e;
-
+  width: 55%;
+  align-self: center;
+  line-height: 50px;
   .rahul {
     display: inline-block;
     opacity: 0;
     transform: translateX(-100px);
-
   }
 
   .srname {
     font-size: 2.6rem;
-    text-align: right;
-    line-height: 70px;
     display: inline-block;
     opacity: 0;
     transform: translateX(-100px);
+    margin-bottom: 40px;
   }
 
   .discripton {
@@ -237,43 +236,51 @@ body {
     overflow: hidden;
     opacity: 0;
     transform: translateX(-100px);
-    width: fit-content;
-    height: fit-content;
   }
-
+  
+  .links{
+    color: $pink;
+    display: inline-block;
+    font-size: 1.4rem;
+    opacity: 0;
+    transform: translateX(-100px);
+    a{
+      text-decoration: none;
+    }
+  }
 
 }
 
-.dis {
-  position: absolute;
-  left: 1%;
-  bottom: 1%;
-  display: flex;
-  flex-direction: column;
+// .dis {
+//   position: absolute;
+//   left: 1%;
+//   bottom: 1%;
+//   display: flex;
+//   flex-direction: column;
 
-  a {
-    width: 3vw;
-    align-self: flex-start;
-  }
+//   a {
+//     width: 3vw;
+//     align-self: flex-start;
+//   }
 
-  svg {
-    height: 48px;
-    width: 48px;
-    margin-bottom: 2vh;
-  }
-}
+//   svg {
+//     height: 48px;
+//     width: 48px;
+//     margin-bottom: 2vh;
+//   }
+// }
 
-.contact {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 15em;
-  opacity: 0;
-  color: $Dark-green;
-  position: absolute;
-  transform: translateX(-100px);
-  left: -90px;
-  bottom: 15vh;
-}
+// .contact {
+//   writing-mode: vertical-rl;
+//   text-orientation: mixed;
+//   font-size: 15em;
+//   opacity: 0;
+//   color: $Dark-green;
+//   position: absolute;
+//   transform: translateX(-100px);
+//   left: -90px;
+//   bottom: 15vh;
+// }
 
 
 
@@ -787,16 +794,13 @@ footer {
 
 /* Tablets (portrait) ----------- */
 @media (max-width : 1300px) {
-  .mainimg{
-    width: 38%;
-    left: 69%;
-  }
+ 
  .Ellipse{
    top: 10%;
  }
 
   .rahul {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
   }
 
   .sec4text {
@@ -900,9 +904,6 @@ footer {
 
   }
 
-
-
-
   .sec4img {
     margin: 0;
   }
@@ -929,6 +930,30 @@ footer {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 770px) {
+  .section1{
+    .flexsec1{
+      flex-direction: column;
+      height: 80%;
+      margin-top: 10%;
+    }
+    .sec1text{
+      height: 40%;
+      width: 80%;
+      .srname{
+        margin-bottom: 10px;
+      }
+      .discripton{
+        margin-bottom: 10px;
+      }
+    }
+    .mainimg{
+      height: 50vh;
+      width: auto;
+    }
+    .scroll{
+      left: 43%;
+    }
+  }
 
   #block::after{
     content: "For best experience visit this site on a desktop.";
@@ -1082,12 +1107,9 @@ footer {
   }
 
   .rahul {
-    font-size: 2.3rem;
+    font-size: 2.8rem;
   }
 
-  .sec1text {
-    line-height: 1px;
-  }
 
   .section2,
   .section3,
