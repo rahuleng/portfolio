@@ -11,10 +11,10 @@ var loaderdiv = document.getElementById("block");
 
 if (load == true) {
 
-	setTimeout (()=>{
+	setTimeout(() => {
 		gsap.to(loaderdiv, { duration: 0.5, y: "-100%" });
-	},1000);
-	
+	}, 1000);
+
 	setTimeout(function () {
 		loaderdiv.style.display = "none";
 
@@ -31,9 +31,9 @@ if (document.getElementById("block").style.display != "none") {
 
 	document.getElementById("mainimg").addEventListener("load", () => {
 
-		setTimeout (()=>{
+		setTimeout(() => {
 			gsap.to(loaderdiv, { duration: 0.5, y: "-100%" });
-		},1000);
+		}, 1000);
 
 		setTimeout(function () {
 			loaderdiv.style.display = "none";
@@ -68,10 +68,9 @@ if (window.innerWidth > 1400) {
 	//parallex effect
 	gsap.from(".laptop", {
 		ease: "none",
-		backgroundPositionY: "0%",
+		backgroundPositionY: "60%",
 		scrollTrigger: {
 			trigger: ".laptop",
-			toggleActions: "play reset play reset",
 			scrub: 0.5,
 		},
 	});
@@ -96,3 +95,16 @@ document.querySelector(".sec3next").addEventListener("click", () => {
 
 });
 
+
+$("document").ready(function () {
+	$(".gallery").magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		gallery: {
+			enabled: true
+		},
+		closeBtnInside: false,
+		closeOnContentClick: true,
+		midClick: true
+	});
+});

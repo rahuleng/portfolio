@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"C:\\Users\\rahul\\MUSIC~2\\port\\img\\Qarothome.jpg":[["Qarothome.64980106.jpg","img/Qarothome.jpg"],"img/Qarothome.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\1.jpg":[["1.dc197a9a.jpg","img/1.jpg"],"img/1.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\1c.jpg":[["1c.5184b7cc.jpg","img/1c.jpg"],"img/1c.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\one.jpg":[["one.a96acd14.jpg","img/one.jpg"],"img/one.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\two.jpg":[["two.f4e3d5d3.jpg","img/two.jpg"],"img/two.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\three.jpg":[["three.2124bad7.jpg","img/three.jpg"],"img/three.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\four.jpg":[["four.0ff0719b.jpg","img/four.jpg"],"img/four.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\five.jpg":[["five.04a510b5.jpg","img/five.jpg"],"img/five.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\six.jpg":[["six.bba1dbe4.jpg","img/six.jpg"],"img/six.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\seven.jpg":[["seven.7c683b2f.jpg","img/seven.jpg"],"img/seven.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\eight.jpg":[["eight.61e8cc21.jpg","img/eight.jpg"],"img/eight.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\nine.jpg":[["nine.d66a1756.jpg","img/nine.jpg"],"img/nine.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"C:\\Users\\rahul\\MUSIC~2\\port\\img\\Qarothome.jpg":[["Qarothome.64980106.jpg","img/Qarothome.jpg"],"img/Qarothome.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\1.jpg":[["1.dc197a9a.jpg","img/1.jpg"],"img/1.jpg"],"C:\\Users\\rahul\\MUSIC~2\\port\\img\\1c.jpg":[["1c.5184b7cc.jpg","img/1c.jpg"],"img/1c.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50569" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60695" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

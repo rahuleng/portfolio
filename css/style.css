@@ -357,7 +357,7 @@ body {
   position: relative;
   left: -15%;
   background-image: url("/img/Qarothome.jpg");
-  background-position: -1vw 29%;
+  background-position: -1vw 0%;
   width: 70%;
   height: 88%;
   background-size: cover;
@@ -717,94 +717,100 @@ body {
 
 .section5 {
   position: relative;
+  min-height: 100vh;
+  margin-bottom: 20px;
+  /* *****  GALLERIES ***** */
 }
 
-.section5 .grid-container {
-  height: 130vh;
+.section5 .gallery-section {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.section5 .inner-width {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.section5 .gallery-section .gallery {
   display: -ms-grid;
   display: grid;
-  margin-left: 20%;
-  padding-bottom: 10%;
-  width: 60vw;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.7%;
-      grid-template-areas: "one two three" "Four Five six" "seven Eight Nine ";
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
 }
 
-.section5 .one {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: one;
-  background-position-x: 30%;
-  background-image: url("/img/one.jpg");
+.section5 .gallery-section .image {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.section5 .two {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: two;
-  background-image: url("/img/two.jpg");
+.section5 .gallery-section .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-filter: saturate(0);
+          filter: saturate(0);
 }
 
-.section5 .three {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: three;
-  background-image: url("/img/three.jpg");
+.section5 .gallery-section .image:hover img {
+  -webkit-filter: saturate(1);
+          filter: saturate(1);
 }
 
-.section5 .Four {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: Four;
-  background-image: url("/img/four.jpg");
-  background-position-y: 20%;
+@media screen and (max-width: 768px) {
+  .section5 .gallery-section .gallery {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
 
-.section5 .Five {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: Five;
-  background-image: url("/img/five.jpg");
-  background-position-x: 40%;
-  background-position-y: 20%;
+@media screen and (max-width: 480px) {
+  .section5 .gallery-section .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+  }
 }
 
-.section5 .six {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: six;
-  background-image: url("/img/six.jpg");
+.section5 .w-1 {
+  grid-column: span 1;
 }
 
-.section5 .seven {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: seven;
-  background-image: url("/img/seven.jpg");
+.section5 .w-2 {
+  grid-column: span 2;
 }
 
-.section5 .Eight {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: Eight;
-  background-image: url("/img/eight.jpg");
+.section5 .w-3 {
+  grid-column: span 3;
 }
 
-.section5 .Nine {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: Nine;
-  background-image: url("/img/nine.jpg");
+.section5 .h-1 {
+  grid-row: span 1;
 }
 
-.section5 .grid-container div {
-  background-color: #48c0b215;
-  background-blend-mode: color-dodge;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 0%;
+.section5 .h-2 {
+  grid-row: span 2;
+}
+
+.section5 .h-3 {
+  grid-row: span 3;
 }
 
 .section5 .sec5text {
@@ -824,7 +830,7 @@ footer {
   width: 100vw;
   padding: 10px;
   background-color: #043e3e;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -864,59 +870,6 @@ footer h3 {
   }
   .section4 {
     margin-bottom: 0%;
-  }
-  .section5 .grid-container {
-    height: 110vh;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: (30vh)[9];
-        grid-template-rows: repeat(9, 30vh);
-        grid-template-areas: "one two" "three Four" "Five six" "seven Eight" "nine ";
-  }
-  .section5 .grid-container .one {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: one;
-  }
-  .section5 .grid-container .two {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: two;
-  }
-  .section5 .grid-container .three {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: three;
-  }
-  .section5 .grid-container .Four {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: Four;
-  }
-  .section5 .grid-container .Five {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: Five;
-  }
-  .section5 .grid-container .six {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    grid-area: six;
-  }
-  .section5 .grid-container .seven {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-area: seven;
-  }
-  .section5 .grid-container .Eight {
-    -ms-grid-row: 4;
-    -ms-grid-column: 2;
-    grid-area: Eight;
-  }
-  .section5 .grid-container .Nine {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    grid-area: nine;
   }
   /* Styles */
   .sec3img {
@@ -1016,59 +969,6 @@ footer h3 {
   }
   .iphone {
     height: 23vh;
-  }
-  .section5 .grid-container {
-    height: 300vh;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: (30vh)[9];
-        grid-template-rows: repeat(9, 30vh);
-        grid-template-areas: "one " "two" "three" "Four" "Five" "six" "seven" "Eight" "nine ";
-  }
-  .section5 .one {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: one;
-  }
-  .section5 .two {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: two;
-  }
-  .section5 .three {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: three;
-  }
-  .section5 .Four {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-area: Four;
-  }
-  .section5 .Five {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    grid-area: Five;
-  }
-  .section5 .six {
-    -ms-grid-row: 6;
-    -ms-grid-column: 1;
-    grid-area: six;
-  }
-  .section5 .seven {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-    grid-area: seven;
-  }
-  .section5 .Eight {
-    -ms-grid-row: 8;
-    -ms-grid-column: 1;
-    grid-area: Eight;
-  }
-  .section5 .Nine {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-    grid-area: nine;
   }
   .sec3img {
     height: 75%;

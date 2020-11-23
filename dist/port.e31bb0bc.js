@@ -7225,10 +7225,9 @@ if (window.innerWidth > 1400) {
   //parallex effect
   _gsap.gsap.from(".laptop", {
     ease: "none",
-    backgroundPositionY: "0%",
+    backgroundPositionY: "60%",
     scrollTrigger: {
       trigger: ".laptop",
-      toggleActions: "play reset play reset",
       scrub: 0.5
     }
   });
@@ -7266,6 +7265,18 @@ document.querySelector(".sec3next").addEventListener("click", function () {
     });
   }
 });
+$("document").ready(function () {
+  $(".gallery").magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery: {
+      enabled: true
+    },
+    closeBtnInside: false,
+    closeOnContentClick: true,
+    midClick: true
+  });
+});
 },{"gsap":"node_modules/gsap/index.js","gsap/ScrollTrigger":"node_modules/gsap/ScrollTrigger.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -7294,7 +7305,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50569" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60695" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
