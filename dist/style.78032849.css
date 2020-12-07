@@ -838,6 +838,10 @@ body {
   right: 5%;
 }
 
+.push {
+  grid-column: span 5;
+}
+
 footer {
   height: 80px;
   width: 100vw;
