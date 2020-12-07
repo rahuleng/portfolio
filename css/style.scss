@@ -18,6 +18,7 @@ $pink: #d5407d;
   display: block;
   height: 100vh;
   width: 100vw;
+  top: 0px;
   overflow: hidden;
   position: fixed;
   z-index: 99;
@@ -692,8 +693,21 @@ body {
   margin-left: 8%;
 }
 
+.center{
+  display: block;
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Jost', sans-serif;
+  color: #043e3e;
+  font-weight: 400;
+  opacity: 0.7;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
 //section5
 .section5 {
+
   position: relative;
   min-height: 100vh;
   margin-bottom: 20px;
@@ -722,7 +736,6 @@ body {
   }
   
   .gallery-section .image{
-    flex: 25%;
     overflow: hidden;
     cursor: pointer;
   }
@@ -747,13 +760,7 @@ body {
     }
   }
   
-  @media screen and (max-width:480px) {
-    .gallery-section .gallery{
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-  }
+
   
  
 
@@ -768,6 +775,8 @@ body {
   .w-3 {
     grid-column: span 3;
   }
+
+  
 
 
 
@@ -784,7 +793,24 @@ body {
   }
 
 
+  @media screen and (max-width:480px) {
+    .gallery-section .gallery{
+      // display: flex;
+      // flex-direction: column;
+      // gap: 2rem;
+      // width: 70%;
+      // margin-left: 15%;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+      width: 80%;
+      margin-left: 10%;
+    }
+    .w-3{ grid-column: span 2;}
 
+    .center{
+      font-size: 3em;
+    }
+  }
 
   .sec5text {
     position: absolute;
@@ -860,9 +886,6 @@ footer {
     margin-bottom: 0%;
   }
 
-  .section5 {
-  
-  }
 
   /* Styles */
 
@@ -985,10 +1008,6 @@ footer {
     height: 23vh;
   }
 
-  .section5 {
-    
-  }
-
   .sec3img {
     height: 75%;
   }
@@ -1046,7 +1065,9 @@ footer {
 
 
 @media only screen and (max-width : 470px) {
-
+  .flexsec1{
+    height: 90%;
+  }
   .iphone {
     height: 18vh;
   }

@@ -103,7 +103,7 @@ $("document").ready(function () {
 		gallery: {
 			enabled: true
 		},
-		closeBtnInside: false,
+		closeBtnInside: true,
 		closeOnContentClick: true,
 		midClick: true
 	});

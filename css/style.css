@@ -10,6 +10,7 @@
   display: block;
   height: 100vh;
   width: 100vw;
+  top: 0px;
   overflow: hidden;
   position: fixed;
   z-index: 99;
@@ -715,6 +716,18 @@ body {
   margin-left: 8%;
 }
 
+.center {
+  display: block;
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Jost', sans-serif;
+  color: #043e3e;
+  font-weight: 400;
+  opacity: 0.7;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
 .section5 {
   position: relative;
   min-height: 100vh;
@@ -745,9 +758,6 @@ body {
 }
 
 .section5 .gallery-section .image {
-  -webkit-box-flex: 25%;
-      -ms-flex: 25%;
-          flex: 25%;
   overflow: hidden;
   cursor: pointer;
 }
@@ -776,19 +786,6 @@ body {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .section5 .gallery-section .gallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 2rem;
-  }
-}
-
 .section5 .w-1 {
   grid-column: span 1;
 }
@@ -811,6 +808,22 @@ body {
 
 .section5 .h-3 {
   grid-row: span 3;
+}
+
+@media screen and (max-width: 480px) {
+  .section5 .gallery-section .gallery {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .section5 .w-3 {
+    grid-column: span 2;
+  }
+  .section5 .center {
+    font-size: 3em;
+  }
 }
 
 .section5 .sec5text {
@@ -1008,6 +1021,9 @@ footer h3 {
 }
 
 @media only screen and (max-width: 470px) {
+  .flexsec1 {
+    height: 90%;
+  }
   .iphone {
     height: 18vh;
   }
