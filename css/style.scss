@@ -183,9 +183,11 @@ body {
 
   .scroll {
     position: absolute;
-    left: 24%;
+    left: 27%;
     bottom: 7vh;
     opacity: 0;
+    height: 10vh;
+    width: 7vh;
   }
 
   .flexsec1 {
@@ -324,7 +326,7 @@ body {
     position: absolute;
     bottom: 10%;
     left: 78%;
-    height: 20vh;
+    height: 22vh;
     width: 20vh;
 
     #lottie {
@@ -953,8 +955,12 @@ footer {
   .section1 {
     .flexsec1 {
       flex-direction: column;
-      height: 80%;
-      margin-top: 10%;
+      height: 90%;
+      margin-top: 7%;
+    }
+    .rahul{
+      font-size: 3.2rem;
+      line-height: 45px;
     }
 
     .sec1text {
@@ -963,6 +969,9 @@ footer {
 
       .srname {
         margin-bottom: 10px;
+        margin-left: 40%;
+        padding-top: 0;
+
       }
 
       .discripton {
@@ -971,7 +980,7 @@ footer {
     }
 
     .mainimg {
-      height: 50vh;
+      height: 47vh;
       width: auto;
     }
 
