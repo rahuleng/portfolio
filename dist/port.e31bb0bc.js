@@ -7208,7 +7208,7 @@ if (document.getElementById("block").style.display != "none") {
 _gsap.gsap.registerPlugin(_ScrollTrigger.ScrollTrigger); //text flot
 
 
-for (var i = 2; i < 6; i++) {
+for (var i = 2; i < 5; i++) {
   _gsap.gsap.from(".sec" + i + "text", {
     y: 250,
     ease: "none",
@@ -7277,7 +7277,7 @@ $("document").ready(function () {
     midClick: true
   });
 });
-},{"gsap":"node_modules/gsap/index.js","gsap/ScrollTrigger":"node_modules/gsap/ScrollTrigger.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"gsap":"node_modules/gsap/index.js","gsap/ScrollTrigger":"node_modules/gsap/ScrollTrigger.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -7305,7 +7305,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58128" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50095" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -7481,5 +7481,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/port.e31bb0bc.js.map

@@ -118,61 +118,64 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/main.js":[function(require,module,exports) {
-if (window.innerWidth > 1400) {
-  new SmoothScroll(document, 120, 5);
-} //smooth scroll
-
-
-function SmoothScroll(target, speed, smooth) {
-  console.log("smooth");
-  if (target === document) target = document.scrollingElement || document.documentElement || document.body.parentNode || document.body; // cross browser support for document scrolling
-
-  var moving = false;
-  var pos = target.scrollTop;
-  var frame = target === document.body && document.documentElement ? document.documentElement : target; // safari is the new IE
-
-  target.addEventListener('mousewheel', scrolled, {
-    passive: false
-  });
-  target.addEventListener('DOMMouseScroll', scrolled, {
-    passive: false
-  });
-
-  function scrolled(e) {
-    e.preventDefault(); // disable default scrolling
-
-    var delta = normalizeWheelDelta(e);
-    pos += -delta * speed;
-    pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)); // limit scrolling
-
-    if (!moving) update();
-  }
-
-  function normalizeWheelDelta(e) {
-    if (e.detail) {
-      if (e.wheelDelta) return e.wheelDelta / e.detail / 40 * (e.detail > 0 ? 1 : -1); // Opera
-      else return -e.detail / 3; // Firefox
-    } else return e.wheelDelta / 120; // IE,Safari,Chrome
-
-  }
-
-  function update() {
-    moving = true;
-    var delta = (pos - target.scrollTop) / smooth;
-    target.scrollTop += delta;
-    if (Math.abs(delta) > 0.5) requestFrame(update);else moving = false;
-  }
-
-  var requestFrame = function () {
-    // requestAnimationFrame cross browser
-    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (func) {
-      window.setTimeout(func, 1000 / 50);
-    };
-  }();
-}
-
-;
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+// if (window.innerWidth > 1400) {
+// 	new SmoothScroll(document, 120, 5);
+// }
+// //smooth scroll
+// function SmoothScroll(target, speed, smooth) {
+// 	console.log("smooth");
+// 	if (target === document)
+// 		target = (document.scrollingElement
+// 			|| document.documentElement
+// 			|| document.body.parentNode
+// 			|| document.body) // cross browser support for document scrolling
+// 	var moving = false
+// 	var pos = target.scrollTop
+// 	var frame = target === document.body
+// 		&& document.documentElement
+// 		? document.documentElement
+// 		: target // safari is the new IE
+// 	target.addEventListener('mousewheel', scrolled, { passive: false })
+// 	target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
+// 	function scrolled(e) {
+// 		e.preventDefault(); // disable default scrolling
+// 		var delta = normalizeWheelDelta(e)
+// 		pos += -delta * speed
+// 		pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
+// 		if (!moving) update()
+// 	}
+// 	function normalizeWheelDelta(e) {
+// 		if (e.detail) {
+// 			if (e.wheelDelta)
+// 				return e.wheelDelta / e.detail / 40 * (e.detail > 0 ? 1 : -1) // Opera
+// 			else
+// 				return -e.detail / 3 // Firefox
+// 		} else
+// 			return e.wheelDelta / 120 // IE,Safari,Chrome
+// 	}
+// 	function update() {
+// 		moving = true
+// 		var delta = (pos - target.scrollTop) / smooth
+// 		target.scrollTop += delta
+// 		if (Math.abs(delta) > 0.5)
+// 			requestFrame(update)
+// 		else
+// 			moving = false
+// 	}
+// 	var requestFrame = function () { // requestAnimationFrame cross browser
+// 		return (
+// 			window.requestAnimationFrame ||
+// 			window.webkitRequestAnimationFrame ||
+// 			window.mozRequestAnimationFrame ||
+// 			window.oRequestAnimationFrame ||
+// 			window.msRequestAnimationFrame ||
+// 			function (func) {
+// 				window.setTimeout(func, 1000 / 50);
+// 			}
+// 		);
+// 	}()
+// };
+},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -200,7 +203,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58128" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50095" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -376,5 +379,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
+},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
 //# sourceMappingURL=/main.fb6bbcaf.js.map

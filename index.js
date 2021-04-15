@@ -51,7 +51,7 @@ if (document.getElementById("block").style.display != "none") {
 gsap.registerPlugin(ScrollTrigger);
 
 //text flot
-for (let i = 2; i < 6; i++) {
+for (let i = 2; i < 5; i++) {
 
 	gsap.from(".sec" + i + "text", {
 		y: 250,
