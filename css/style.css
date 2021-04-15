@@ -256,7 +256,7 @@ body {
 
 .sec1text {
   font-family: 'Jost', sans-serif;
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 400;
   z-index: 1;
   text-align: center;
@@ -290,7 +290,7 @@ body {
 }
 
 .sec1text .srname {
-  font-size: 2.6rem;
+  font-size: 2rem;
   display: inline-block;
   opacity: 0;
   margin-top: 2%;
@@ -301,7 +301,7 @@ body {
 }
 
 .sec1text .discripton {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 300;
   display: block;
   line-height: 1;

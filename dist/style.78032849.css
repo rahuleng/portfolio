@@ -219,7 +219,7 @@ body {
 
 .section1 .scroll {
   position: absolute;
-  left: 33%;
+  left: 30%;
   bottom: 7vh;
   opacity: 0;
   height: 10vh;
@@ -301,7 +301,7 @@ body {
 }
 
 .sec1text .discripton {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 300;
   display: block;
   line-height: 1;
