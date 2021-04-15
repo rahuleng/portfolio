@@ -219,7 +219,7 @@ body {
 
 .section1 .scroll {
   position: absolute;
-  left: 27%;
+  left: 30%;
   bottom: 7vh;
   opacity: 0;
   height: 10vh;
@@ -240,7 +240,7 @@ body {
 }
 
 .mainimg {
-  height: 80vh;
+  height: 40vh;
   width: auto;
   opacity: 1;
   z-index: -1;
@@ -251,16 +251,17 @@ body {
       align-self: center;
   -ms-grid-column-align: left;
       justify-self: left;
+  border-radius: 2px;
 }
 
 .sec1text {
   font-family: 'Jost', sans-serif;
-  font-size: 6em;
+  font-size: 8rem;
   font-weight: 400;
   z-index: 1;
   text-align: center;
   color: #043e3e;
-  width: 55%;
+  width: 70%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -292,14 +293,15 @@ body {
   font-size: 2.6rem;
   display: inline-block;
   opacity: 0;
-  margin-left: 25%;
+  margin-top: 2%;
+  margin-left: 35%;
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
   margin-bottom: 40px;
 }
 
 .sec1text .discripton {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 300;
   display: block;
   line-height: 1;
@@ -960,7 +962,7 @@ footer h3 {
     margin-bottom: 10px;
   }
   .section1 .mainimg {
-    height: 47vh;
+    height: 27vh;
     width: auto;
   }
   .section1 .scroll {
